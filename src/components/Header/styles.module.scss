@@ -1,0 +1,64 @@
+@import 'styles/variables';
+
+.header {
+  background-color: $color-black;
+  display: flex;
+  flex-wrap: wrap-reverse;
+
+  .header_h1 {
+    font-family: $font-base;
+    color: $color-golden;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    line-height: 117px;
+    font-size: 90px;
+  }
+
+  .header_p {
+    margin: 2rem 0;
+  }
+
+  .header_img img {
+    width: 80%;
+  }
+
+  .wrapper_info {
+    flex: 1;
+  }
+
+  .wrapper_img {
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+@media screen and (min-width: 2000px) {
+  .header_h1 {
+    font-size: 180px;
+    line-height: 210px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .header_h1 {
+    font-size: 90px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header_h1 {
+    font-size: 70px;
+    line-height: 87px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header_h1 {
+    font-size: 50px;
+    line-height: 70px;
+  }
+}

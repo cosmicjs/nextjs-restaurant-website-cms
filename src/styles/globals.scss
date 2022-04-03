@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+@import 'styles/variables';
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-display: optional;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.slide_bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide_bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide_bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cormorant {
+  font-family: $font-base;
+  color: $color-white;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-feature-settings: "tnum" on, "lnum" on;
+  line-height: 29.9px;
+  font-size: 23px;
+}
+
+.opensans {
+  font-family: $font-alt;
+  color: $color-white;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.custom_button {
+  background-color: $color-crimson;
+  color: $color-black;
+  font-family: $font-base;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 28px;
+  font-size: 16px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-golden;
+    transform: scale(0.98);
+    transition: .3s ease;
+  }
+}
+
+.section_padding {
+  padding: 4rem 6rem;
+}
+
+.img_padding {
+  padding: 10px;
+}
+
+.app_bg {
+  background: url('../assets/bg.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.app_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.app_wrapper_info {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.app_wrapper_img {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 2rem;
+
+  &::before {
+      content: '';
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      background: $color-golden no-repeat center;
+    }
+  
+    &::after {
+      content: '';
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      background: $color-golden no-repeat center;
+    }
+}
+
+.app_wrapper_img-reverse {
+  justify-content: flex-start;
+  margin-right: 2rem;
+}

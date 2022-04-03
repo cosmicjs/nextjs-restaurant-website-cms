@@ -1,0 +1,142 @@
+@import 'styles/variables';
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $color-black;
+    padding: 1rem 2rem;
+}
+
+.navbar_logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar_logo img {
+    width: 150px;
+}
+
+.navbar_links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar_links li {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.navbar_login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar_login a {
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: .5s ease;
+}
+
+.navbar_login a:hover {
+    border-bottom: 1px solid $color-golden;
+}
+
+.navbar_login div {
+    width: 1px;
+    height: 30px;
+    background: $color-grey;
+}
+
+.navbar_smallscreen {
+    display: none;
+}
+
+.navbar_smallscreen_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-black;
+    transition: .5s ease;
+
+    flex-direction: column;
+    z-index: 5;
+}
+
+.navbar_smallscreen_overlay .overlay_close {
+    font-size: 27px;
+    color: $color-golden;
+    cursor: pointer;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.navbar_smallscreen_links {
+    list-style: none;
+}
+
+.navbar_smallscreen_links li {
+    margin: 2rem;
+    cursor: pointer;
+    color: $color-golden;
+    font-size: 2rem;
+    text-align: center;
+    font-family: $font-base;
+}
+
+.navbar_smallscreen_links li:hover {
+    color: $color-white;
+}
+
+.menu_item {
+    cursor: pointer;
+}
+
+.menu_item:hover {
+    color: $color-golden;
+}
+
+@media screen and (min-width: 2000px) {
+    .navbar_logo img {
+        width: 210px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .navbar_links {
+        display: none;
+    }
+
+    .navbar_smallscreen {
+        display: flex;
+    }
+    
+    .navbar_smallscreen .navbar_hamburger {
+        color: $color-white; 
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar_login {
+        display: none;
+    }
+
+    .navbar_logo img {
+        width: 110px;
+    }
+}
