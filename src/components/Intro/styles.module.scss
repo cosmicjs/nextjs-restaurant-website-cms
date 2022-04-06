@@ -1,0 +1,54 @@
+@import 'styles/variables';
+
+.intro_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    margin-top: 5rem;
+}
+
+.intro_content_quote {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.intro_sign {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.intro_sign p:first-child {
+    font-family: $font-base;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 41.6px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: $color-golden;
+}
+
+.intro_sign img {
+    width: 250px;
+    margin-top: 3rem;
+}
+
+.wrapper_img {
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 2000px) {
+    .intro_sign img {
+        width: 370px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .intro_sign img {
+        width: 80%;
+    }
+}

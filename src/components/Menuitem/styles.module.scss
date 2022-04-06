@@ -1,0 +1,41 @@
+@import 'styles/variables';
+
+.menuitem {
+    width: 100%;
+    margin: 1rem 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.menuitem_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuitem_sub {
+    width: 100%;
+    margin-top: 0.2rem;
+}
+
+.menuitem_name {
+    flex: 1;
+
+  .menuitem_title {
+    color: '#DCCA87';
+  }
+}
+
+.menuitem_dash {
+    width: 90px;
+    height: 1px;
+    background: $color-golden;
+    margin: 0 1rem;
+}
+
+.menuitem_price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

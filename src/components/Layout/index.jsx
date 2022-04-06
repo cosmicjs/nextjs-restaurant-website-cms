@@ -3,7 +3,7 @@ import Navbar from 'components/Navbar';
 
 import styles from './styles.module.scss';
 
-function Layout({children}) {
+const Layout = ({children}) => {
   return (
     <main className={styles.layout}>
       <Navbar />

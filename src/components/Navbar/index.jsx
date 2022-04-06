@@ -8,7 +8,7 @@ import images from '../../constants/images';
 
 import styles from './styles.module.scss';
 
-function Navbar({ menuItems }) {
+const Navbar = ({ menuItems }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const handleToggle = () => {
@@ -18,28 +18,28 @@ function Navbar({ menuItems }) {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar_logo}>
-        <Image src={images.gericht} alt="logo" width={150} height={50}/>
+        <Image src={images.gericht} alt='logo' width={150} height={50}/>
       </div>
       <ul className={styles.navbar_links}>
         {menuItems?.map(({ name }) => (
           <li className={cn(styles.menu_item,'opensans')} key={name}>
-            <Link href="#home">{name}</Link>
+            <Link href='#home'>{name}</Link>
           </li>
         ))}
 
-        <li className={cn(styles.menu_item,'opensans')}><Link href="#home">Home</Link></li>
-        <li className={cn(styles.menu_item,'opensans')}><Link href="#about">About</Link></li>
-        <li className={cn(styles.menu_item,'opensans')}><Link href="#menu">Menu</Link></li>
-        <li className={cn(styles.menu_item,'opensans')}><Link href="#awards">Awards</Link></li>
-        <li className={cn(styles.menu_item,'opensans')}><Link href="#contact">Contact</Link></li>
+        <li className={cn(styles.menu_item,'opensans')}><Link href='#home'>Home</Link></li>
+        <li className={cn(styles.menu_item,'opensans')}><Link href='#about'>About</Link></li>
+        <li className={cn(styles.menu_item,'opensans')}><Link href='#menu'>Menu</Link></li>
+        <li className={cn(styles.menu_item,'opensans')}><Link href='#awards'>Awards</Link></li>
+        <li className={cn(styles.menu_item,'opensans')}><Link href='#contact'>Contact</Link></li>
       </ul>
       <div className={styles.navbar_login}>
         <p className={cn(styles.menu_item,'opensans')}>
-          <Link href="#login" passHref>Log In / Registration</Link>
+          <Link href='#login' passHref>Log In / Registration</Link>
         </p>
         <div />
         <p className={cn(styles.menu_item,'opensans')}>
-          <Link href="/" passHref>Book Table</Link>
+          <Link href='/' passHref>Book Table</Link>
         </p>
       </div>
       <div className={styles.navbar_smallscreen}>
@@ -48,11 +48,11 @@ function Navbar({ menuItems }) {
           <div className={cn(styles.navbar_smallscreen_overlay, 'slide_bottom', 'flex_center')}>
             <MdOutlineRestaurantMenu className={styles.overlay_close} onClick={handleToggle} />
             <ul className={styles.navbar_smallscreen_links}>
-              <li onClick={handleToggle}><Link href="#home">Home</Link></li>
-              <li onClick={handleToggle}><Link href="#about">About</Link></li>
-              <li onClick={handleToggle}><Link href="#menu">Menu</Link></li>
-              <li onClick={handleToggle}><Link href="#awards">Awards</Link></li>
-              <li onClick={handleToggle}><Link href="#contact">Contact</Link></li>
+              <li onClick={handleToggle}><Link href='#home'>Home</Link></li>
+              <li onClick={handleToggle}><Link href='#about'>About</Link></li>
+              <li onClick={handleToggle}><Link href='#menu'>Menu</Link></li>
+              <li onClick={handleToggle}><Link href='#awards'>Awards</Link></li>
+              <li onClick={handleToggle}><Link href='#contact'>Contact</Link></li>
             </ul>
           </div>
         )}
