@@ -30,7 +30,6 @@ const Navbar = ({ menuItems }) => {
         <li className={cn(styles.menu_item,'opensans')}><Link href='#home'>Home</Link></li>
         <li className={cn(styles.menu_item,'opensans')}><Link href='#about'>About</Link></li>
         <li className={cn(styles.menu_item,'opensans')}><Link href='#menu'>Menu</Link></li>
-        <li className={cn(styles.menu_item,'opensans')}><Link href='#awards'>Awards</Link></li>
         <li className={cn(styles.menu_item,'opensans')}><Link href='#contact'>Contact</Link></li>
       </ul>
       <div className={styles.navbar_login}>
@@ -51,7 +50,6 @@ const Navbar = ({ menuItems }) => {
               <li onClick={handleToggle}><Link href='#home'>Home</Link></li>
               <li onClick={handleToggle}><Link href='#about'>About</Link></li>
               <li onClick={handleToggle}><Link href='#menu'>Menu</Link></li>
-              <li onClick={handleToggle}><Link href='#awards'>Awards</Link></li>
               <li onClick={handleToggle}><Link href='#contact'>Contact</Link></li>
             </ul>
           </div>
