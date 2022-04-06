@@ -1,0 +1,20 @@
+@import 'styles/variables';
+
+.social_links_icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social_icon {
+  color: $color-white;
+  margin: 0.5rem;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.social_icon:hover {
+  color: $color-golden;
+  transform: scale(0.98);
+  transition: .5s ease;
+}

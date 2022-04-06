@@ -34,11 +34,7 @@ const Navbar = ({ menuItems }) => {
       </ul>
       <div className={styles.navbar_login}>
         <p className={cn(styles.menu_item,'opensans')}>
-          <Link href='#login' passHref>Log In / Registration</Link>
-        </p>
-        <div />
-        <p className={cn(styles.menu_item,'opensans')}>
-          <Link href='/' passHref>Book Table</Link>
+          <Link href='#contact' passHref>Book Table</Link>
         </p>
       </div>
       <div className={styles.navbar_smallscreen}>

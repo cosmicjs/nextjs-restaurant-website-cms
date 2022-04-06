@@ -7,11 +7,10 @@ import SpacialMenu from 'components/Menu';
 import Intro from 'components/Intro';
 import VideoIntro from 'components/VideoIntro';
 import Gallery from 'components/Gallery';
-import Contact from 'components/Contact';
+import Contacts from 'components/Contact';
 
 import { getAllPostsForHome } from 'lib/api';
 
-import styles from 'styles/Home.module.scss';
 
 function Home({ dayMenu }) {
   console.log( 'dayMenu',dayMenu );
@@ -33,7 +32,7 @@ function Home({ dayMenu }) {
       </Layout>
       <footer>
         <VideoIntro />
-        <Contact />
+        <Contacts />
       </footer>
     </>
   )
