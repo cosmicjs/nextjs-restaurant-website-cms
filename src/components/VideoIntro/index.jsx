@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
 import cn from 'classnames';
 import { BsFillPlayFill, BsPauseFill } from 'react-icons/bs';
 

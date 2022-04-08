@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Header from 'components/Header';
 import Layout from 'components/Layout';
 import Footer from 'components/Footer';
@@ -11,7 +10,7 @@ import Gallery from 'components/Gallery';
 import Contacts from 'components/Contact';
 
 import { getInfoForHome } from 'lib/api';
-import chooseByType from 'utils/chooseByValue';
+import chooseByType from 'utils/chooseValueByType';
 
 function Home({ data }) {
 

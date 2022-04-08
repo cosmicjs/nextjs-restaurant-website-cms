@@ -4,7 +4,6 @@ import cn from 'classnames';
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
 import SubHeading from 'components/SubHeading';
-import images from '../../constants/images';
 
 import styles from './styles.module.scss';
 
