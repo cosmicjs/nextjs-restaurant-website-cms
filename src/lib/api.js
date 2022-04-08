@@ -10,7 +10,7 @@ const bucket = Cosmic().bucket({
 
 const is404 = (error) => /not found/i.test(error.message);
 
-export async function getPreviewPostBySlug(slug) {
+export async function getPreviewDataBySlug(slug) {
   const params = {
     slug,
     props: 'slug',
@@ -26,7 +26,7 @@ export async function getPreviewPostBySlug(slug) {
   }
 }
 
-export async function getAllPostsWithSlug() {
+export async function getAllDataWithSlug() {
   const params = {
     type: 'posts',
     props: 'slug',
@@ -35,9 +35,9 @@ export async function getAllPostsWithSlug() {
   return data.objects
 }
 
-export async function getInfoForHome(type, preview) {
+export async function getInfoForHome(preview) {
   const params = {
-    type: type || 'header',
+    type: 'header',
     props: 'title,slug,metadata,created_at',
     sort: '-created_at',
     ...(preview && { status: 'all' }),
@@ -46,7 +46,7 @@ export async function getInfoForHome(type, preview) {
   return data.objects
 }
 
-export async function getPostAndMorePosts(slug, preview) {
+export async function getPostAndMoreData(slug, preview) {
   const singleObjectParams = {
     slug,
     props: 'slug,title,metadata,created_at',
@@ -64,12 +64,12 @@ export async function getPostAndMorePosts(slug, preview) {
   } )
   
   const moreObjects = await bucket.getObjects(moreObjectParams)
-  const morePosts = moreObjects.objects
+  const moreData = moreObjects.objects
     ?.filter(({ slug: object_slug }) => object_slug !== slug)
     .slice(0, 2)
 
   return {
     post: object?.object,
-    morePosts,
+    moreData,
   }
 }

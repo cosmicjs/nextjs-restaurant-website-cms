@@ -31,15 +31,8 @@ const VideoIntro = ({url}) => {
         controls={false}
         muted
       >
-        <source src={`https://youtu.be/4IlWl4hm4Ys`} type="video/mp4" />
+        <source src={url?.metadata?.video?.imgix_url} type="video/mp4" />
       </video>
-      {/* <iframe
-        src="https://www.youtube.com/embed/E7wJTI-1dvQ"
-        frameBorder="0"
-        allow="autoplay; encrypted-media"
-        allowFullScreen
-        title="video"
-      /> */}
       <div className={cn(styles.video_overlay, 'flex_center')}>
         <button
           className={cn(styles.video_overlay_circle, 'flex_center')}

@@ -7,11 +7,10 @@ import { MdOutlineRestaurantMenu } from 'react-icons/md';
 
 import styles from './styles.module.scss';
 
-const Navbar = ({ navbarInfo }) => {
-  const { about, action, contact, home, menu, logo } = navbarInfo?.metadata;
+const Navbar = ({ navbarInfo : { metadata }}) => {
   const [toggleMenu, setToggleMenu] = useState(false);
   
-  const navbarItems = [about, contact, home, menu];
+  const navbarItems = [metadata?.about, metadata?.contact, metadata?.home, metadata?.menu];
 
   const handleToggle = () => {
     setToggleMenu( prev => !prev );
@@ -20,7 +19,7 @@ const Navbar = ({ navbarInfo }) => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar_logo}>
-        <Image src={logo?.imgix_url || images.gericht} alt='logo' width={150} height={50}/>
+        <Image src={metadata?.logo?.imgix_url || images.gericht} alt='logo' width={150} height={50}/>
       </div>
       <ul className={styles.navbar_links}>
         {navbarItems?.map((item) => (
@@ -31,7 +30,7 @@ const Navbar = ({ navbarInfo }) => {
       </ul>
       <div className={styles.navbar_login}>
         <p className={cn(styles.menu_item,'opensans')}>
-          <Link href='#contact' passHref>{action || 'Book Table'}</Link>
+          <Link href='#contact' passHref>{metadata?.action || 'Book Table'}</Link>
         </p>
       </div>
       <div className={styles.navbar_smallscreen}>

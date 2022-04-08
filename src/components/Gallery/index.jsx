@@ -8,7 +8,7 @@ import images from '../../constants/images';
 
 import styles from './styles.module.scss';
 
-const Gallery = () => {
+const Gallery = ({info}) => {
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -24,16 +24,16 @@ const Gallery = () => {
   return (
     <div className={cn(styles.gallery, 'flex_center')}>
       <div className={styles.gallery_content}>
-        <SubHeading title='Instagram' />
-        <h1 className='headtext_cormorant'>Photo Gallery</h1>
-        <p className={cn('opensans')} style={{ color: '#AAAAAA', marginTop: '2rem' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mu.</p>
+        <SubHeading title={info?.metadata?.section || 'Instagram'} />
+        <h1 className='headtext_cormorant'>{info?.metadata?.title || 'Gallery'}</h1>
+        <p className={cn(styles.gallery_content_intro || 'opensans')}>{info?.metadata?.intro || 'Lorem ipsum dolor sit amet.'}</p>
         <button type='button' className='custom_button'>View More</button>
       </div>
       <div className={styles.gallery_images}>
         <div className={styles.gallery_images_container} ref={scrollRef}>
-          {[ images.gallery01,images.gallery02,images.gallery03,images.gallery04 ].map( ( image,index ) => (
-            <div className={cn(styles.gallery_images_card, 'flex_center' )} key={`gallery_image-${index + 1}`}>
-              <Image src={image} alt='gallery_image' />
+          {info?.metadata?.details?.map(({title, picture}, index) => (
+            <div className={cn(styles.gallery_images_card, 'flex_center' )} key={index}>
+              <Image layout='fill' src={picture?.imgix_url} alt='gallery_image' />
               <BsInstagram className={styles.gallery_image_icon} />
             </div>
           ))}

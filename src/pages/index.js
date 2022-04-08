@@ -11,36 +11,34 @@ import Gallery from 'components/Gallery';
 import Contacts from 'components/Contact';
 
 import { getInfoForHome } from 'lib/api';
-import handleChooseByValue from 'utils/chooseByValue';
+import chooseByType from 'utils/chooseByValue';
 
 function Home({ data }) {
-  console.log( 'data',handleChooseByValue(data, 'menu') );
-  const { metadata } = data[0];
 
   return (
     <>
       <Head>
-        <title>Cosmic Template</title>
+        <title>Cosmic Template v1</title>
         <meta name="description" content="Create template using cosmic.js CMS" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout navbar={handleChooseByValue(data, 'menu')}>
-        <Header info={handleChooseByValue(data, 'header')}/>
-        <AboutUs />
-        <SpacialMenu />
-        <Intro />
-        <Gallery />
+      <Layout navbar={chooseByType(data, 'navigation')}>
+        <Header info={chooseByType(data, 'header')}/>
+        <AboutUs info={chooseByType(data, 'about')}/>
+        <SpacialMenu menu={[chooseByType(data, 'cocktails'), chooseByType(data, 'wines')]}/>
+        <Intro info={chooseByType(data, 'history')}/>
+        <Gallery info={chooseByType(data, 'gallery')}/>
       </Layout>
       <Footer>
-        <VideoIntro />
-        <Contacts />
+        <VideoIntro url={chooseByType(data, 'video')}/>
+        <Contacts info={chooseByType(data, 'contact')}/>
       </Footer>
     </>
   )
 }
 
 export async function getStaticProps({ preview }) {
-  const data = (await getInfoForHome('header', preview)) || [];
+  const data = (await getInfoForHome(preview)) || [];
   return {
     props: { data },
   }
