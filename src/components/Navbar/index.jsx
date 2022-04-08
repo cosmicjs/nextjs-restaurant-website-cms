@@ -4,37 +4,34 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
-import images from '../../constants/images';
 
 import styles from './styles.module.scss';
 
-const Navbar = ({ menuItems }) => {
+const Navbar = ({ navbarInfo }) => {
+  const { about, action, contact, home, menu, logo } = navbarInfo?.metadata;
   const [toggleMenu, setToggleMenu] = useState(false);
+  
+  const navbarItems = [about, contact, home, menu];
 
   const handleToggle = () => {
-    setToggleMenu(prev => !prev);
-  }
+    setToggleMenu( prev => !prev );
+  };
   
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar_logo}>
-        <Image src={images.gericht} alt='logo' width={150} height={50}/>
+        <Image src={logo?.imgix_url || images.gericht} alt='logo' width={150} height={50}/>
       </div>
       <ul className={styles.navbar_links}>
-        {menuItems?.map(({ name }) => (
-          <li className={cn(styles.menu_item,'opensans')} key={name}>
-            <Link href='#home'>{name}</Link>
+        {navbarItems?.map((item) => (
+          <li className={cn(styles.menu_item,'opensans')} key={item}>
+            <Link href={`#${item.toLowerCase()}`}>{item}</Link>
           </li>
         ))}
-
-        <li className={cn(styles.menu_item,'opensans')}><Link href='#home'>Home</Link></li>
-        <li className={cn(styles.menu_item,'opensans')}><Link href='#about'>About</Link></li>
-        <li className={cn(styles.menu_item,'opensans')}><Link href='#menu'>Menu</Link></li>
-        <li className={cn(styles.menu_item,'opensans')}><Link href='#contact'>Contact</Link></li>
       </ul>
       <div className={styles.navbar_login}>
         <p className={cn(styles.menu_item,'opensans')}>
-          <Link href='#contact' passHref>Book Table</Link>
+          <Link href='#contact' passHref>{action || 'Book Table'}</Link>
         </p>
       </div>
       <div className={styles.navbar_smallscreen}>
@@ -43,10 +40,11 @@ const Navbar = ({ menuItems }) => {
           <div className={cn(styles.navbar_smallscreen_overlay, 'slide_bottom', 'flex_center')}>
             <MdOutlineRestaurantMenu className={styles.overlay_close} onClick={handleToggle} />
             <ul className={styles.navbar_smallscreen_links}>
-              <li onClick={handleToggle}><Link href='#home'>Home</Link></li>
-              <li onClick={handleToggle}><Link href='#about'>About</Link></li>
-              <li onClick={handleToggle}><Link href='#menu'>Menu</Link></li>
-              <li onClick={handleToggle}><Link href='#contact'>Contact</Link></li>
+              {navbarItems?.map(item => (
+                <li onClick={handleToggle} key={item}>
+                  <Link href={`#${item.toLowerCase()}`}>{item}</Link>
+                </li>
+              ))}
             </ul>
           </div>
         )}

@@ -35,9 +35,9 @@ export async function getAllPostsWithSlug() {
   return data.objects
 }
 
-export async function getAllPostsForHome(preview) {
+export async function getInfoForHome(type, preview) {
   const params = {
-    type: 'daymenus',
+    type: type || 'header',
     props: 'title,slug,metadata,created_at',
     sort: '-created_at',
     ...(preview && { status: 'all' }),

@@ -68,7 +68,7 @@
     transition: .5s ease;
 
     flex-direction: column;
-    z-index: 5;
+    z-index: 999;
 }
 
 .navbar_smallscreen_overlay .overlay_close {
