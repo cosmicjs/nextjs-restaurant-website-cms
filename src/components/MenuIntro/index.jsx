@@ -6,10 +6,9 @@ import images from '../../constants/images';
 
 import styles from './styles.module.scss';
 
-const Intro = ({ info }) => {
-  
+const MenuIntro = ({ info }) => {
   return (
-    <div className={cn('app_bg', 'app_wrapper', 'section_padding')} id='intro'>
+    <div className={cn(styles.intro_container, 'app_bg', 'app_wrapper', 'section_padding')} id='menu_intro'>
       <div className={cn('app_wrapper_img','app_wrapper_img_reverse')}>
         <div className={cn(styles.wrapper_img, 'img_padding')} >
           <Image
@@ -21,7 +20,7 @@ const Intro = ({ info }) => {
         </div>
     </div>
     <div className='app_wrapper_info'>
-      <SubHeading title={info?.metadata?.section || 'Our Value'} />
+      <SubHeading title='Try it!' />
         <h1 className='headtext_cormorant'>{info?.metadata?.title || 'We believe in'}</h1>
         <div className={styles.intro_content}>
           <div className={styles.intro_content_quote}>
@@ -38,4 +37,4 @@ const Intro = ({ info }) => {
   )
 }
 
-export default Intro;
+export default MenuIntro;

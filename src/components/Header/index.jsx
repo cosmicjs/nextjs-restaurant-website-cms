@@ -26,9 +26,9 @@ const Header = ({ info }) => {
       <div className='app_wrapper_img'>
         <div className={cn(styles.wrapper_img, 'img_padding')} >
           <Image
-            src={baner?.imgix_url || images.header}
+            src={baner?.imgix_url || images?.header}
             alt='header_img'
-            width={600}
+            width={650}
             height={500}
             />
         </div>

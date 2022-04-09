@@ -1,18 +1,23 @@
 import Head from 'next/head';
-import Header from 'components/Header';
+import { useRouter } from 'next/router';
+
 import Layout from 'components/Layout';
 import Footer from 'components/Footer';
-import AboutUs from 'components/AboutUs';
-import SpacialMenu from 'components/Menu';
-import Intro from 'components/Intro';
+import Contacts from 'components/Contact';
+import MenuIntro from 'components/MenuIntro';
 import VideoIntro from 'components/VideoIntro';
 import Gallery from 'components/Gallery';
-import Contacts from 'components/Contact';
 
-import { getInfoForHome } from 'lib/api';
+import { getAllDataWithSlug,getInfoForHome } from 'lib/api';
 import chooseByType from 'utils/chooseValueByType';
 
-function Home({ data }) {
+function Menu({ data, preview }) {
+  const {
+    query: {slug},
+  } = useRouter();
+
+  console.log( 'slug',slug, 'data', data, 'preview', preview );
+
   return (
     <>
       <Head>
@@ -20,11 +25,8 @@ function Home({ data }) {
         <meta name="description" content="Create template using cosmic.js CMS" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout navbar={chooseByType(data, 'navigation')}>
-        <Header info={chooseByType(data, 'header')}/>
-        <AboutUs info={chooseByType(data, 'about')}/>
-        <SpacialMenu menu={[chooseByType(data, 'cocktails'), chooseByType(data, 'wines')]}/>
-        <Intro info={chooseByType(data, 'history')}/>
+      <Layout >
+        <MenuIntro />
         <Gallery info={chooseByType(data, 'gallery')}/>
       </Layout>
       <Footer>
@@ -35,11 +37,19 @@ function Home({ data }) {
   )
 }
 
-export async function getStaticProps({ preview }) {
+export async function getStaticProps({ params, preview = null }) {
   const data = (await getInfoForHome(preview)) || [];
   return {
     props: { data },
   }
 }
 
-export default Home;
+export async function getStaticPaths() {
+  const allData = (await getAllDataWithSlug()) || []
+  return {
+    paths: allData.map((menu) => `/menu/${menu.slug}`),
+    fallback: true,
+  }
+}
+
+export default Menu;

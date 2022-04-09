@@ -28,7 +28,7 @@ export async function getPreviewDataBySlug(slug) {
 
 export async function getAllDataWithSlug() {
   const params = {
-    type: 'posts',
+    type: 'menu',
     props: 'slug',
   }
   const data = await bucket.getObjects(params)
@@ -46,7 +46,7 @@ export async function getInfoForHome(preview) {
   return data.objects
 }
 
-export async function getPostAndMoreData(slug, preview) {
+export async function getDataAndMoreData(slug, preview) {
   const singleObjectParams = {
     slug,
     props: 'slug,title,metadata,created_at',

@@ -36,11 +36,15 @@ const Gallery = ({info}) => {
       </div>
       <div className={styles.gallery_images}>
         <div className={styles.gallery_images_container} ref={scrollRef}>
-          {info?.metadata?.details?.map(({title, picture}, index) => (
-            <div className={cn(styles.gallery_images_card, 'flex_center' )} key={index}>
-              <Image layout='fill' src={picture?.imgix_url} alt='gallery_image' />
-              <BsInstagram className={styles.gallery_image_icon} />
-            </div>
+          {info?.metadata?.details?.map( ( { title, picture },index ) => (
+            <Link key={title} href={info ? `/menu/${title}` : '#menu_intro'} passHref>
+              <a>
+                <div className={cn(styles.gallery_images_card, 'flex_center' )} key={index}>
+                  <Image src={picture?.imgix_url} layout='fill' objectFit='cover' alt='gallery_image' />
+                  <BsInstagram className={styles.gallery_image_icon} />
+                </div>
+              </a>
+            </Link>
           ))}
         </div>
         <div className={styles.gallery_images_arrows}>

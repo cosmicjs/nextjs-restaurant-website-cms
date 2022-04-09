@@ -5,13 +5,14 @@ import Image from 'next/image';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
+import { images } from '../../constants';
 
 import styles from './styles.module.scss';
 
-const Navbar = ({ navbarInfo : { metadata }}) => {
+const Navbar = ({ navbarInfo }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
   
-  const navbarItems = [metadata?.about, metadata?.contact, metadata?.home, metadata?.menu];
+  const navbarItems = [navbarInfo?.metadata?.about, navbarInfo?.metadata?.contact, navbarInfo?.metadata?.home, navbarInfo?.metadata?.menu];
 
   const handleToggle = () => {
     setToggleMenu( prev => !prev );
@@ -20,18 +21,20 @@ const Navbar = ({ navbarInfo : { metadata }}) => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar_logo}>
-        <Image src={metadata?.logo?.imgix_url || images.gericht} alt='logo' width={150} height={50}/>
+        <Image src={navbarInfo?.metadata?.logo?.imgix_url || images?.gericht} alt='logo' width={150} height={50}/>
       </div>
       <ul className={styles.navbar_links}>
-        {navbarItems?.map((item) => (
-          <li className={cn(styles.menu_item,'opensans')} key={item}>
-            <Link href={`#${item.toLowerCase()}`} passHref>{item}</Link>
+        {navbarItems?.map((item, index) => (
+          <li className={cn(styles.menu_item,'opensans')} key={index}>
+            <Link href={navbarInfo ? `#${item?.toLowerCase()}` : '#contact'} passHref>
+              <a>{item}</a>
+            </Link>
           </li>
         ))}
       </ul>
       <div className={styles.navbar_login}>
         <p className={cn(styles.menu_item,'opensans')}>
-          <Link href='#contact' passHref>{metadata?.action || 'Book Table'}</Link>
+          <Link href='#contact' passHref>{navbarInfo?.metadata?.action || 'Book Table'}</Link>
         </p>
       </div>
       <div className={styles.navbar_smallscreen}>
@@ -40,9 +43,11 @@ const Navbar = ({ navbarInfo : { metadata }}) => {
           <div className={cn(styles.navbar_smallscreen_overlay, 'slide_bottom', 'flex_center')}>
             <MdOutlineRestaurantMenu className={styles.overlay_close} onClick={handleToggle} />
             <ul className={styles.navbar_smallscreen_links}>
-              {navbarItems?.map(item => (
-                <li onClick={handleToggle} key={item}>
-                  <Link href={`#${item.toLowerCase()}`} passHref>{item}</Link>
+              {navbarItems?.map((item, index) => (
+                <li onClick={handleToggle} key={index}>
+                  <Link href={navbarInfo ? `#${item?.toLowerCase()}` : '#contact'} passHref>
+                  <a>{item}</a>
+                  </Link>
                 </li>
               ))}
             </ul>
