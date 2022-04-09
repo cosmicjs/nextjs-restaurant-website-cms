@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import cn from 'classnames';
 
 import images from '../../constants/images';
@@ -22,7 +23,12 @@ const AboutUs = ({info}) =>{
             <Image src={images.spoon} alt="spoon_image" />
           </div>
           <p className='opensans'>{about_intro || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}</p>
-          <button type='button' className='custom_button'>Know More</button>
+          <Link
+              href='#intro'
+              passHref
+            >
+            <button type='button' className='custom_button'>Know More</button>
+          </Link>
         </div>
         <div className={cn(styles.about_content_knife, 'flex_center')}>
           <div className={styles.about_content_img}>
@@ -35,7 +41,12 @@ const AboutUs = ({info}) =>{
             <Image src={images.spoon} alt="spoon_image" />
           </div>
           <p className='opensans'>{title_intro || 'Adipiscing tempus ullamcorper lobortis odio tellus arcu volutpat.'}</p>
-          <button type='button' className='custom_button'>Know More</button>
+          <Link
+              href='#gallery'
+              passHref
+            >
+            <button type='button' className='custom_button'>Know More</button>
+          </Link>
         </div>
       </div>
     </div>

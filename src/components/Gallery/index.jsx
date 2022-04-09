@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import cn from 'classnames';
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
@@ -21,12 +22,17 @@ const Gallery = ({info}) => {
   };
 
   return (
-    <div className={cn(styles.gallery, 'flex_center')}>
+    <div className={cn(styles.gallery, 'flex_center')} id='gallery'>
       <div className={styles.gallery_content}>
         <SubHeading title={info?.metadata?.section || 'Instagram'} />
         <h1 className='headtext_cormorant'>{info?.metadata?.title || 'Gallery'}</h1>
         <p className={cn(styles.gallery_content_intro || 'opensans')}>{info?.metadata?.intro || 'Lorem ipsum dolor sit amet.'}</p>
-        <button type='button' className='custom_button'>View More</button>
+        <Link
+          href='#menu'
+          passHref
+          >
+          <button type='button' className='custom_button'>View More</button>
+        </Link>
       </div>
       <div className={styles.gallery_images}>
         <div className={styles.gallery_images_container} ref={scrollRef}>

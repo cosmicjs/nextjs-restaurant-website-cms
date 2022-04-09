@@ -9,7 +9,7 @@ import styles from './styles.module.scss';
 const Intro = ({ info }) => {
   
   return (
-    <div className={cn('app_bg', 'app_wrapper', 'section_padding')}>
+    <div className={cn('app_bg', 'app_wrapper', 'section_padding')} id='intro'>
       <div className={cn('app_wrapper_img','app_wrapper_img_reverse')}>
         <div className={cn(styles.wrapper_img, 'img_padding')} >
           <Image

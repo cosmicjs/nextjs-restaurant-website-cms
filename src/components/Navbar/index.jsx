@@ -25,7 +25,7 @@ const Navbar = ({ navbarInfo : { metadata }}) => {
       <ul className={styles.navbar_links}>
         {navbarItems?.map((item) => (
           <li className={cn(styles.menu_item,'opensans')} key={item}>
-            <Link href={`#${item.toLowerCase()}`}>{item}</Link>
+            <Link href={`#${item.toLowerCase()}`} passHref>{item}</Link>
           </li>
         ))}
       </ul>
@@ -42,7 +42,7 @@ const Navbar = ({ navbarInfo : { metadata }}) => {
             <ul className={styles.navbar_smallscreen_links}>
               {navbarItems?.map(item => (
                 <li onClick={handleToggle} key={item}>
-                  <Link href={`#${item.toLowerCase()}`}>{item}</Link>
+                  <Link href={`#${item.toLowerCase()}`} passHref>{item}</Link>
                 </li>
               ))}
             </ul>

@@ -1,6 +1,6 @@
-const handleChooseByProp = ( info,type ) => {
+const handleChooseByProp = (info, type) => {
   if( info && type ) {
-    return info?.hasOwnProperty( type ) ? info[ type ] : null;
+    return info?.hasOwnProperty(type) ? info[type] : null;
   }
 }
 

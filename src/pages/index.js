@@ -17,7 +17,7 @@ function Home({ data }) {
   return (
     <>
       <Head>
-        <title>Cosmic Template v1</title>
+        <title>Next.js Restaurant CMS</title>
         <meta name="description" content="Create template using cosmic.js CMS" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
