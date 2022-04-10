@@ -9,8 +9,8 @@ import SubHeading from 'components/SubHeading';
 import styles from './styles.module.scss';
 
 const Gallery = ({info}) => {
-  const scrollRef = useRef(null);
-
+  const scrollRef = useRef( null );
+  
   const scroll = (direction) => {
     const { current } = scrollRef;
 
@@ -24,9 +24,9 @@ const Gallery = ({info}) => {
   return (
     <div className={cn(styles.gallery, 'flex_center')} id='gallery'>
       <div className={styles.gallery_content}>
-        <SubHeading title={info?.metadata?.section || 'Instagram'} />
-        <h1 className='headtext_cormorant'>{info?.metadata?.title || 'Gallery'}</h1>
-        <p className={cn(styles.gallery_content_intro || 'opensans')}>{info?.metadata?.intro || 'Lorem ipsum dolor sit amet.'}</p>
+        <SubHeading title={info?.[0]?.metadata?.section || 'Instagram'} />
+        <h1 className='headtext_cormorant'>{info?.[0]?.metadata?.title || 'Gallery'}</h1>
+        <p className={cn(styles.gallery_content_intro || 'opensans')}>{info?.[0]?.metadata?.intro || 'Lorem ipsum dolor sit amet.'}</p>
         <Link
           href='#menu'
           passHref
@@ -36,12 +36,16 @@ const Gallery = ({info}) => {
       </div>
       <div className={styles.gallery_images}>
         <div className={styles.gallery_images_container} ref={scrollRef}>
-          {info?.metadata?.details?.map( ( { title, picture },index ) => (
-            <Link key={title} href={info ? `/menu/${title}` : '#menu_intro'} passHref>
+          {info?.[1]?.metadata?.menu?.map(({title, slug, price, tags, picture}, index ) => (
+            <Link key={index} href={info ? `/menu/${slug}` : '#menu_intro'} passHref>
               <a>
                 <div className={cn(styles.gallery_images_card, 'flex_center' )} key={index}>
                   <Image src={picture?.imgix_url} layout='fill' objectFit='cover' alt='gallery_image' />
-                  <BsInstagram className={styles.gallery_image_icon} />
+                  <div className={styles.gallery_image_icon}>
+                    <BsInstagram />
+                    <h3>{title}</h3>
+                    <h4>{price}</h4>
+                  </div>
                 </div>
               </a>
             </Link>

@@ -45,31 +45,3 @@ export async function getInfoForHome(preview) {
   const data = await bucket.getObjects(params)
   return data.objects
 }
-
-export async function getDataAndMoreData(slug, preview) {
-  const singleObjectParams = {
-    slug,
-    props: 'slug,title,metadata,created_at',
-    ...(preview && { status: 'all' }),
-  }
-  const moreObjectParams = {
-    type: 'posts',
-    limit: 3,
-    props: 'title,slug,metadata,created_at',
-    ...(preview && { status: 'all' }),
-  }
-  const object = await bucket.getObject(singleObjectParams).catch((error) => {
-    if (is404(error)) return
-    throw error
-  } )
-  
-  const moreObjects = await bucket.getObjects(moreObjectParams)
-  const moreData = moreObjects.objects
-    ?.filter(({ slug: object_slug }) => object_slug !== slug)
-    .slice(0, 2)
-
-  return {
-    post: object?.object,
-    moreData,
-  }
-}

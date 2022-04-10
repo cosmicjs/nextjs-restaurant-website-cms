@@ -16,8 +16,6 @@ function Menu({ data, preview }) {
     query: {slug},
   } = useRouter();
 
-  console.log( 'slug',slug, 'data', data, 'preview', preview );
-
   return (
     <>
       <Head>
@@ -26,8 +24,8 @@ function Menu({ data, preview }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout >
-        <MenuIntro />
-        <Gallery info={chooseByType(data, 'gallery')}/>
+        <MenuIntro info={chooseByType(data, 'food')} slug={slug} />
+        <Gallery info={[chooseByType(data, 'gallery'), chooseByType(data, 'food')]}/>
       </Layout>
       <Footer>
         <VideoIntro url={chooseByType(data, 'video')}/>

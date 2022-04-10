@@ -54,10 +54,16 @@
 .gallery_image_icon {
     position: absolute;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     opacity: 0;
     transition: .5s ease;
     cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .gallery_images_card img {

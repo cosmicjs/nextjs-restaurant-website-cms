@@ -13,6 +13,7 @@ import { getInfoForHome } from 'lib/api';
 import chooseByType from 'utils/chooseValueByType';
 
 function Home({ data }) {
+  console.log( 'data', data);
   return (
     <>
       <Head>
@@ -23,9 +24,9 @@ function Home({ data }) {
       <Layout navbar={chooseByType(data, 'navigation')}>
         <Header info={chooseByType(data, 'header')}/>
         <AboutUs info={chooseByType(data, 'about')}/>
-        <SpacialMenu menu={[chooseByType(data, 'cocktails'), chooseByType(data, 'wines')]}/>
+        <SpacialMenu info={[chooseByType(data, 'drink'), chooseByType(data, 'food')]}/>
         <Intro info={chooseByType(data, 'history')}/>
-        <Gallery info={chooseByType(data, 'gallery')}/>
+        <Gallery info={[chooseByType(data, 'gallery'), chooseByType(data, 'food')]}/>
       </Layout>
       <Footer>
         <VideoIntro url={chooseByType(data, 'video')}/>
