@@ -1,17 +1,23 @@
 import { NextResponse } from 'next/server';
 
-const TARGET_COUNTRY = 'US'
-
-export async function middleware( req, res ) {
-  const { pathname } = req.nextUrl;
-
-  const country = req.geo.country || 'US';
-  const city = req.geo.city || 'New York';
-
+export async function middleware( request ) {
+  // create an instance of the class to access the public methods. This uses `next()`,
   let response = NextResponse.next();
 
-  if (pathname.includes('/api/menu') && country === TARGET_COUNTRY) {
-    response.cookie( `restaurant-city-${city}`);
-    return response;;
+  const { nextUrl: url,geo } = request;
+  
+  const country = geo.country;
+  const city = geo.city || 'San Francisco';
+  const region = geo.region || 'CA';
+
+  // get the cookies from the request
+  let cookieFromRequest = request.cookies['location-cookie'];
+
+  if(!cookieFromRequest) {
+    // set the `cookie`
+    response.cookie('location-cookie', `${country|city|region}`);
   }
+
+  return response;
 }
+

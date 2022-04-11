@@ -13,7 +13,6 @@ import { getInfoForHome } from 'lib/api';
 import chooseByType from 'utils/chooseValueByType';
 
 function Home({ data }) {
-  console.log( 'data', data);
   return (
     <>
       <Head>
