@@ -3,12 +3,10 @@ import { NextResponse } from 'next/server';
 export async function middleware( request ) {
   // create an instance of the class to access the public methods. This uses `next()`,
   let response = NextResponse.next();
-
-  const { nextUrl: url,geo } = request;
   
-  const country = geo.country;
-  const city = geo.city || 'San Francisco';
-  const region = geo.region || 'CA';
+  const country = request.geo.country || 'US';
+  const city = request.geo.city || 'San Francisco';
+  const region = request.geo.region || 'CA';
 
   // get the cookies from the request
   let cookieFromRequest = request.cookies['location-cookie'];

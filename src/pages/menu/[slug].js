@@ -11,7 +11,7 @@ import Gallery from 'components/Gallery';
 import { getAllDataWithSlug,getInfoForHome } from 'lib/api';
 import chooseByType from 'utils/chooseValueByType';
 
-function Menu({ data, preview }) {
+function Menu({ data }) {
   const {
     query: {slug},
   } = useRouter();
@@ -28,7 +28,7 @@ function Menu({ data, preview }) {
         <Gallery info={[chooseByType(data, 'gallery'), chooseByType(data, 'food')]}/>
       </Layout>
       <Footer>
-        <VideoIntro url={chooseByType(data, 'video')}/>
+        <VideoIntro url={chooseByType(data, 'sushi')}/>
         <Contacts info={chooseByType(data, 'contact')}/>
       </Footer>
     </>
