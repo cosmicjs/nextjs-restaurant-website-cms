@@ -23,7 +23,7 @@ function Menu({ data }) {
         <meta name="description" content="Create template using cosmic.js CMS" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout >
+      <Layout navbar={chooseByType(data, 'navigation')}>
         <MenuIntro info={chooseByType(data, 'food')} slug={slug} />
         <Gallery info={[chooseByType(data, 'gallery'), chooseByType(data, 'food')]}/>
       </Layout>

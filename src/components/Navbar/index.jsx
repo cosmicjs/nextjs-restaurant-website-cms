@@ -20,13 +20,19 @@ const Navbar = ({ navbarInfo }) => {
   
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navbar_logo}>
-        <Image src={navbarInfo?.metadata?.logo?.imgix_url || images?.gericht} alt='logo' width={150} height={50}/>
-      </div>
+      <Link href='/' passHref>
+        <div className={styles.navbar_logo}>
+          <Image
+            src={navbarInfo?.metadata?.logo?.imgix_url || images?.gericht}
+            layout='fill'
+            objectFit='cover'
+            alt='logo' />
+        </div>
+      </Link>
       <ul className={styles.navbar_links}>
         {navbarItems?.map((item, index) => (
           <li className={cn(styles.menu_item,'opensans')} key={index}>
-            <Link href={navbarInfo ? `#${item?.toLowerCase()}` : '#contact'} passHref>
+            <Link href={navbarInfo ? `/#${item?.toLowerCase()}` : '#contact'} passHref>
               <a>{item}</a>
             </Link>
           </li>
@@ -45,7 +51,7 @@ const Navbar = ({ navbarInfo }) => {
             <ul className={styles.navbar_smallscreen_links}>
               {navbarItems?.map((item, index) => (
                 <li onClick={handleToggle} key={index}>
-                  <Link href={navbarInfo ? `#${item?.toLowerCase()}` : '#contact'} passHref>
+                  <Link href={navbarInfo ? `/#${item?.toLowerCase()}` : '#contact'} passHref>
                   <a>{item}</a>
                   </Link>
                 </li>
