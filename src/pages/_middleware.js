@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
 
 export async function middleware( request ) {
-  // create an instance of the class to access the public methods. This uses `next()`,
+  // create an instance of the class to access the public methods.
+  //This uses`next()`,
+  
   let response = NextResponse.next();
   
   const country = request.geo.country || 'US';
