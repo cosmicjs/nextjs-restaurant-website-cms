@@ -11,7 +11,7 @@ const MenuIntro = ({ info, slug }) => {
   const chooseMenuItem = info?.metadata?.menu?.length ?  chooseByType(info?.metadata?.menu, `${slug}`) : [];
 
   return (
-    <div className={cn(styles.intro_container, 'app_bg', 'app_wrapper', 'section_padding')} id='menu_intro'>
+    <div className={cn(styles.intro_container, 'app_bg', 'app_wrapper', 'section_padding')} id='menu-intro'>
       <div className={cn('app_wrapper_img','app_wrapper_img_reverse')}>
         <div className={cn(styles.wrapper_img, 'img_padding')} >
           <Image

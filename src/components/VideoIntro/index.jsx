@@ -23,7 +23,7 @@ const VideoIntro = ({url}) => {
   }, [url]);
 
   return (
-    <div className={styles.video} id='video'>
+    <div className={styles.container_video} id='video'>
       <video
         ref={videoRef}
         loop
