@@ -24,7 +24,7 @@ function Menu({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout navbar={chooseByType(data, 'navigation')}>
-        <MenuIntro info={chooseByType(data, 'food')} slug={slug} />
+        <MenuIntro info={[chooseByType(data, 'food'), chooseByType(data, 'drink')]} slug={slug} />
         <Gallery info={[chooseByType(data, 'gallery'), chooseByType(data, 'food')]}/>
       </Layout>
       <Footer>

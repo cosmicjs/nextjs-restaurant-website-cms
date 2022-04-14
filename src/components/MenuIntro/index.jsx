@@ -8,7 +8,7 @@ import chooseByType from 'utils/chooseValueByType';
 import styles from './styles.module.scss';
 
 const MenuIntro = ({ info, slug }) => {
-  const chooseMenuItem = info?.metadata?.menu?.length ?  chooseByType(info?.metadata?.menu, `${slug}`) : [];
+  const chooseMenuItem = chooseByType(info[0]?.metadata?.menu,`${slug}` ) || chooseByType(info[1]?.metadata?.menu,`${slug}` );
 
   return (
     <div className={cn(styles.intro_container, 'app_bg', 'app_wrapper', 'section_padding')} id='menu-intro'>
