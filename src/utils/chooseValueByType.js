@@ -1,7 +1,7 @@
-const chooseByType = ( info,type ) => {
-  if( info && type ) {
-    const choose = info?.filter(content => Object.values(content).includes(type));
-    return choose ? choose[0] : [];
+const chooseByType = (data, slugName) => {
+  if( data && slugName ) {
+    const chooseBySlug = data?.filter(content => Object.values(content).includes(slugName));
+    return chooseBySlug ? chooseBySlug[0] : [];
   }
 }
 

@@ -9,7 +9,7 @@ import VideoIntro from 'components/VideoIntro';
 import Gallery from 'components/Gallery';
 import Contacts from 'components/Contact';
 
-import { getInfoForHome } from 'lib/api';
+import { getDataFromBucket } from 'lib/api';
 import chooseByType from 'utils/chooseValueByType';
 
 function Home({ data }) {
@@ -36,7 +36,7 @@ function Home({ data }) {
 }
 
 export async function getStaticProps({ preview }) {
-  const data = (await getInfoForHome(preview)) || [];
+  const data = (await getDataFromBucket(preview)) || [];
   return {
     props: { data },
   }

@@ -35,7 +35,7 @@ export async function getAllDataWithSlug() {
   return data.objects
 }
 
-export async function getInfoForHome(preview) {
+export async function getDataFromBucket(preview) {
   const params = {
     type: 'header',
     props: 'title,slug,metadata,created_at',

@@ -8,7 +8,7 @@ import MenuIntro from 'components/MenuIntro';
 import VideoIntro from 'components/VideoIntro';
 import Gallery from 'components/Gallery';
 
-import { getAllDataWithSlug,getInfoForHome } from 'lib/api';
+import { getAllDataWithSlug,getDataFromBucket } from 'lib/api';
 import chooseByType from 'utils/chooseValueByType';
 
 function Menu({ data }) {
@@ -36,16 +36,17 @@ function Menu({ data }) {
 }
 
 export async function getStaticProps({ params, preview = null }) {
-  const data = (await getInfoForHome(preview)) || [];
+  const data = (await getDataFromBucket(preview)) || [];
   return {
     props: { data },
   }
 }
 
 export async function getStaticPaths() {
-  const allData = (await getAllDataWithSlug()) || []
+  const dataWithSlug = (await getAllDataWithSlug()) || [];
+  
   return {
-    paths: allData.map((menu) => `/menu/${menu.slug}`),
+    paths: dataWithSlug.map((menu) => `/menu/${menu.slug}`),
     fallback: true,
   }
 }
