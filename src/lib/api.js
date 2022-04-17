@@ -12,7 +12,7 @@ const is404 = (error) => /not found/i.test(error.message);
 
 export async function getPreviewDataBySlug(slug) {
   const params = {
-    slug: slug ? slug : BUCKET_SLUG,
+    slug: slug || BUCKET_SLUG,
     props: 'slug',
     status: 'all',
   }
