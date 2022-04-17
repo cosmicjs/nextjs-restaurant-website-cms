@@ -14,6 +14,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ![template](https://user-images.githubusercontent.com/34789741/163723056-ec8c570c-59e4-414c-9f74-d421af5bb484.gif)
 
+View the live demo - https://nextjs-restaurant-cms.vercel.app/
+
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
