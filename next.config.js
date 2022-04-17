@@ -3,7 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
         formats: ['image/avif', 'image/webp'],
-        domains: ['imgix.cosmicjs.com'],
+        domains: [ 'imgix.cosmicjs.com' ],
+        loader: 'imgix',
     },
 }
 
