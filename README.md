@@ -12,7 +12,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-![https://i.gyazo.com/08b64ca0aa83d811a8fd3e26843ac1f9.gif](https://i.gyazo.com/08b64ca0aa83d811a8fd3e26843ac1f9.gif)
+![template](https://user-images.githubusercontent.com/34789741/163723056-ec8c570c-59e4-414c-9f74-d421af5bb484.gif)
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
