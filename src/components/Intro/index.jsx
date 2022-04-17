@@ -15,6 +15,7 @@ const Intro = ({ info }) => {
           <Image
             src={info?.metadata?.picture?.imgix_url || images.chef}
             alt='intro_image'
+            objectFit='cover'
             width={550}
             height={600}
             />
@@ -31,7 +32,7 @@ const Intro = ({ info }) => {
         <div className={styles.intro_sign}>
           <p>{info?.metadata?.sub_info || 'Kevin Luo'}</p>
           <p className='opensans'>Chef & Founder</p>
-          <Image src={images.sign} alt='sign_image' />
+          <Image src={images.sign} alt='sign_image' objectFit='cover' />
         </div>
       </div>
     </div>

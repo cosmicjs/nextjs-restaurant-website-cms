@@ -108,7 +108,7 @@ a {
 }
 
 .img_padding {
-  padding: 15px;
+  padding: 17px;
 }
 
 .app_bg {
@@ -121,6 +121,7 @@ a {
   justify-content: space-between;
   align-items: center;
 
+  min-width: 100%;
   min-height: 100%;
 }
 
@@ -134,8 +135,6 @@ a {
 }
 
 .app_wrapper_img {
-  flex: 1;
-  width: 100%;
   position: relative;
   display: flex;
   justify-content: center;

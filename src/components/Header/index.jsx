@@ -28,6 +28,7 @@ const Header = ({ info }) => {
           <Image
             src={baner?.imgix_url || images?.header}
             alt='header_img'
+            objectFit='cover'
             width={650}
             height={500}
             />

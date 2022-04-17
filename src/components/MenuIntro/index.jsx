@@ -17,6 +17,7 @@ const MenuIntro = ({ info, slug }) => {
           <Image
             src={chooseMenuItem?.picture?.imgix_url || images.chef}
             alt='intro_image'
+            objectFit='cover'
             width={550}
             height={600}
             />

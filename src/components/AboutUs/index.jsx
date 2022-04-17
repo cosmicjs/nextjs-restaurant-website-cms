@@ -13,7 +13,7 @@ const AboutUs = ({info}) =>{
     <div className={cn( styles.about,'app_bg','flex_center','section_padding' )} id='about'>
       <div className={cn( styles.about_overlay,'flex_center' )}>
         <div className={styles.about_overlay_img}>
-          <Image src={initials?.imgix_url || images.G} layout='fill' objectFit='contain' alt='overlay' />
+          <Image src={initials?.imgix_url || images.G} layout='fill' objectFit='cover' alt='overlay' />
         </div>
       </div>
       <div className={cn(styles.about_content, 'flex_center')}>

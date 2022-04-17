@@ -19,7 +19,7 @@ const Footer = ({children}) => {
               Powered by{' '}
             </p>
             <span className={styles.footer_logo}>
-              <Image src="/cosmic.svg" alt="Cosmic Logo" width={90} height={40} />
+              <Image src="/cosmic.svg" objectFit='contain' alt="Cosmic Logo" width={90} height={40} />
             </span> 
           </div>
         </a>

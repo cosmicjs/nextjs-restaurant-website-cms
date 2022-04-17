@@ -31,7 +31,8 @@ const Contacts = ({info}) => (
         <Image
           src={info?.metadata?.picture?.imgix_url || images.laurels}
           alt='find_us_img'
-          width={500}
+          objectFit='cover'
+          width={550}
           height={600} />
       </div>
     </div>
