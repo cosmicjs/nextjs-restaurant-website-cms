@@ -65,7 +65,7 @@ a {
   font-family: $font-base;
   color: $color-white;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 3px;
   text-transform: capitalize;
   font-feature-settings: "tnum" on, "lnum" on;
   line-height: 29.9px;
@@ -76,7 +76,7 @@ a {
   font-family: $font-alt;
   color: $color-white;
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: 3px;
   text-transform: capitalize;
   line-height: 28px;
   font-size: 16px;
@@ -87,7 +87,7 @@ a {
   color: $color-black;
   font-family: $font-base;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 3px;
   line-height: 28px;
   font-size: 16px;
   padding: 0.5rem 1.5rem;
@@ -95,11 +95,14 @@ a {
   border: none;
   outline: none;
   cursor: pointer;
+  border-bottom: 3px solid transparent;
 
   &:hover {
-    background-color: $color-golden;
+    background-color: transparent;
+    color: $color-golden;
     transform: scale(0.98);
     transition: .3s ease;
+    border-bottom: 3px solid $color-golden;
   }
 }
 
@@ -173,9 +176,9 @@ a {
 .headtext_cormorant {
   font-family: $font-base;
   color: $color-golden;
-  font-size: 64px;
-  line-height: 83.2px;
-  letter-spacing: 0.04em;
+  font-size: 62px;
+  line-height: 80px;
+  letter-spacing: 3px;
   text-transform: capitalize;
 }
 

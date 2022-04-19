@@ -6,6 +6,18 @@
 
     display: flex;
     flex-direction: column;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+    color: $color-golden;
+    transform: scale(0.98);
+    transition: .3s ease;
+    border-bottom: 2px solid $color-golden;
+
+        .menuitem_title {
+            color: $color-golden;
+        }
+    }
 }
 
 .menuitem_head {
@@ -21,10 +33,6 @@
 
 .menuitem_name {
     flex: 1;
-
-  .menuitem_title {
-    color: '#DCCA87';
-  }
 }
 
 .menuitem_dash {

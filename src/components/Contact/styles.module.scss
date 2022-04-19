@@ -6,8 +6,14 @@
     margin: 0 auto;
   }
 
-  .contact_title {
-    margin-bottom: 2rem;
+  .header_h1 {
+    font-family: $font-base;
+    color: $color-golden;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    line-height: 110px;
+    font-size: 80px;
   }
 
   .contact_hours {
@@ -15,6 +21,10 @@
     margin: 2rem 0;
   }
 
+  .follow_title {
+    margin-top: 3.5rem;
+  }
+
   .contact_social {
-    margin: 3rem;
+    margin: 1rem 0;
   }

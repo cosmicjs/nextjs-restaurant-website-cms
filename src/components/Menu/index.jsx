@@ -5,7 +5,7 @@ import SubHeading from 'components/SubHeading';
 import MenuItem from 'components/Menu/Menuitem';
 
 import chooseByType from 'utils/chooseValueByType';
-import { images } from '../../constants';
+import { images } from 'constants';
 
 import styles from './styles.module.scss';
 

@@ -2,12 +2,11 @@ import Image from 'next/image';
 import cn from 'classnames';
 import SubHeading from 'components/SubHeading';
 
-import images from '../../constants/images';
+import images from 'constants/images';
 
 import styles from './styles.module.scss';
 
 const Intro = ({ info }) => {
-  
   return (
     <div className={cn('app_bg', 'app_wrapper', 'section_padding')} id='intro'>
       <div className={cn('app_wrapper_img','app_wrapper_img_reverse')}>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import cn from 'classnames';
 
 import SubHeading from 'components/SubHeading';
-import images from '../../constants/images';
+import images from 'constants/images';
 
 import styles from './styles.module.scss';
 

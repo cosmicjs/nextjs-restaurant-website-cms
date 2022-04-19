@@ -2,7 +2,7 @@ import Image from 'next/image';
 import cn from 'classnames';
 import SubHeading from 'components/SubHeading';
 
-import images from '../../constants/images';
+import images from 'constants/images';
 import chooseByType from 'utils/chooseValueByType';
 
 import styles from './styles.module.scss';

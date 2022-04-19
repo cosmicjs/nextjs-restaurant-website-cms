@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
-import { images } from '../../constants';
+import { images } from 'constants';
 
 import styles from './styles.module.scss';
 
