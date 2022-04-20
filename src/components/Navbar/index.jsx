@@ -40,7 +40,7 @@ const Navbar = ({ navbarInfo }) => {
       </ul>
       <div className={styles.navbar_login}>
         <p className={cn(styles.menu_item,'opensans')}>
-          <Link href='#contact' passHref>{navbarInfo?.metadata?.action || 'Book Table'}</Link>
+          <Link href='#contact' passHref>{navbarInfo?.metadata?.action}</Link>
         </p>
       </div>
       <div className={styles.navbar_smallscreen}>

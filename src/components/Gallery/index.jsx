@@ -5,6 +5,7 @@ import cn from 'classnames';
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
 import SubHeading from 'components/SubHeading';
+import Button from 'components/Button';
 
 import styles from './styles.module.scss';
 
@@ -24,15 +25,10 @@ const Gallery = ({info}) => {
   return (
     <div className={cn(styles.gallery, 'flex_center')} id='gallery'>
       <div className={styles.gallery_content}>
-        <SubHeading title={info?.[0]?.metadata?.section || 'Instagram'} />
-        <h1 className='headtext_cormorant'>{info?.[0]?.metadata?.title || 'Gallery'}</h1>
-        <p className={cn(styles.gallery_content_intro || 'opensans')}>{info?.[0]?.metadata?.intro || 'Lorem ipsum dolor sit amet.'}</p>
-        <Link
-          href='#menu'
-          passHref
-          >
-          <button type='button' className='custom_button'>View More</button>
-        </Link>
+        <SubHeading title={info?.[0]?.metadata?.section} />
+        <h1 className='headtext_cormorant'>{info?.[0]?.metadata?.title}</h1>
+        <p className={cn(styles.gallery_content_intro || 'opensans')}>{info?.[0]?.metadata?.intro}</p>
+        <Button name='View More' path='#menu' />
       </div>
       <div className={styles.gallery_images}>
         <div className={styles.gallery_images_container} ref={scrollRef}>

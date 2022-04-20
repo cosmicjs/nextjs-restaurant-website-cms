@@ -25,14 +25,14 @@ const MenuIntro = ({ info, slug }) => {
     </div>
     <div className='app_wrapper_info'>
       <SubHeading title='Try it!' />
-        <h1 className='headtext_cormorant'>{chooseMenuItem?.title || 'We believe in'}</h1>
+        <h1 className='headtext_cormorant'>{chooseMenuItem?.title}</h1>
         <div className={styles.intro_content}>
           <div className={styles.intro_sign}>
-            <p>{chooseMenuItem?.tags || 'AU'}</p>
-            <p className='opensans'>{chooseMenuItem?.price || 'AU'}</p>
+            <p>{chooseMenuItem?.tags}</p>
+            <p className='opensans'>{chooseMenuItem?.price}</p>
           </div>
           <div className={styles.intro_content_quote}>
-            <p className='opensans'>{chooseMenuItem?.intro || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit auctor sit .'}</p>
+            <p className='opensans'>{chooseMenuItem?.intro}</p>
           </div>
         </div>
       </div>

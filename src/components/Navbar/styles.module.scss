@@ -33,6 +33,14 @@
 .navbar_links li {
     margin: 0 1rem;
     cursor: pointer;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+        color: $color-golden;
+        transform: scale(0.98);
+        transition: .3s ease;
+        border-bottom: 2px solid $color-golden;
+    }
 }
 
 .navbar_login {
