@@ -2,18 +2,18 @@
 
 To build this app, we’re going to use the following technologies:
 
-[Next.js](https://nextjs.org/docs) - A React framework that makes it easy to spin up a full-stack application.
-[Cosmic](https://www.cosmicjs.com/) - A Headless CMS that gives us the ability to quickly manage our content.
-[Sass](https://sass-lang.com/) -  A stable, and powerful professional-grade CSS extension language.
+- [Next.js](https://nextjs.org/docs) - A React framework that makes it easy to spin up a full-stack application.
+- [Cosmic](https://www.cosmicjs.com/) - A Headless CMS that gives us the ability to quickly manage our content.
+- [Sass](https://sass-lang.com/) -  A stable, and powerful professional-grade CSS extension language.
 
 ### Links
-[Install the App Template -](https://www.notion.so/url) 
-[Check out the code](https://github.com/naira-ge/nextjs-restaurant-cms)
-[View the live demo](https://nextjs-restaurant-cms.vercel.app/)
+- [Install the App Template -](https://www.notion.so/url) 
+- [Check out the code](https://github.com/naira-ge/nextjs-restaurant-cms)
+- [View the live demo](https://nextjs-restaurant-cms.vercel.app/)
 
 
 ### Screenshots
-![template](https://user-images.githubusercontent.com/34789741/163723056-ec8c570c-59e4-414c-9f74-d421af5bb484.gif)
+![template](https://user-images.githubusercontent.com/34789741/164302224-483d19df-4e68-472c-b578-b0a2741f97b8.gif)
 
 ## Getting started
 
