@@ -4,7 +4,7 @@ import Layout from 'components/Layout';
 import Footer from 'components/Footer';
 import AboutUs from 'components/AboutUs';
 import SpacialMenu from 'components/Menu';
-import Intro from 'components/Intro';
+import Introduction from 'components/Introduction';
 import VideoIntro from 'components/VideoIntro';
 import Gallery from 'components/Gallery';
 import Contacts from 'components/Contact';
@@ -24,7 +24,7 @@ function Home({ data }) {
         <Header info={chooseByType(data, 'header')}/>
         <AboutUs info={chooseByType(data, 'about')}/>
         <SpacialMenu info={[chooseByType(data, 'drink'), chooseByType(data, 'food')]}/>
-        <Intro info={chooseByType(data, 'history')}/>
+        <Introduction info={chooseByType(data, 'history')}/>
         <Gallery info={[chooseByType(data, 'gallery'), chooseByType(data, 'food')]}/>
       </Layout>
       <Footer>

@@ -25,7 +25,7 @@ const Navbar = ({ navbarInfo }) => {
           <Image
             src={navbarInfo?.metadata?.logo?.imgix_url || images?.gericht}
             layout='fill'
-            objectFit='cover'
+            objectFit='contain'
             alt='logo' />
         </div>
       </Link>

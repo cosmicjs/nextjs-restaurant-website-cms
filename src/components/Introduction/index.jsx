@@ -6,7 +6,7 @@ import images from 'constants/images';
 
 import styles from './styles.module.scss';
 
-const Intro = ({ info }) => {
+const Introduction = ({ info }) => {
   return (
     <div className={cn('app_bg', 'app_wrapper', 'section_padding')} id='intro'>
       <div className={cn('app_wrapper_img','app_wrapper_img_reverse')}>
@@ -38,4 +38,4 @@ const Intro = ({ info }) => {
   )
 }
 
-export default Intro;
+export default Introduction;
