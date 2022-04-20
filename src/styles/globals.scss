@@ -121,11 +121,11 @@ a {
 
 .app_wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
-  min-width: 100%;
-  min-height: 80%;
+  width: 100%;
+  min-height: 85%;
 }
 
 .app_wrapper_info {
