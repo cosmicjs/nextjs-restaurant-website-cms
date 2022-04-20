@@ -11,28 +11,30 @@ const MenuIntro = ({ info, slug }) => {
   const chooseMenuItem = chooseByType(info[0]?.metadata?.menu,`${slug}` ) || chooseByType(info[1]?.metadata?.menu,`${slug}` );
 
   return (
-    <div className={cn(styles.intro_container, 'app_bg', 'app_wrapper', 'section_padding')} id='menu-intro'>
-      <div className={cn('app_wrapper_img','app_wrapper_img_reverse')}>
-        <div className={cn(styles.wrapper_img, 'img_padding')} >
-          <Image
-            src={chooseMenuItem?.picture?.imgix_url || images.chef}
-            alt='intro_image'
-            objectFit='cover'
-            width={550}
-            height={600}
-            />
-        </div>
-    </div>
-    <div className='app_wrapper_info'>
-      <SubHeading title='Try it!' />
-        <h1 className='headtext_cormorant'>{chooseMenuItem?.title}</h1>
-        <div className={styles.intro_content}>
-          <div className={styles.intro_sign}>
-            <p>{chooseMenuItem?.tags}</p>
-            <p className='opensans'>{chooseMenuItem?.price}</p>
+    <div className={cn(styles.intro_container, 'app_bg', 'section_padding')} id='menu-intro'>
+      <div className={cn('app_container', 'app_wrapper')}>
+        <div className={cn('app_wrapper_img','app_wrapper_img_reverse')}>
+          <div className={cn(styles.wrapper_img, 'img_padding')} >
+            <Image
+              src={chooseMenuItem?.picture?.imgix_url || images.chef}
+              alt='intro_image'
+              objectFit='cover'
+              width={550}
+              height={600}
+              />
           </div>
-          <div className={styles.intro_content_quote}>
-            <p className='opensans'>{chooseMenuItem?.intro}</p>
+        </div>
+        <div className='app_wrapper_info'>
+          <SubHeading title='Try it!' />
+          <h1 className='headtext_cormorant'>{chooseMenuItem?.title}</h1>
+          <div className={styles.intro_content}>
+            <div className={styles.intro_sign}>
+              <p>{chooseMenuItem?.tags}</p>
+              <p className='opensans'>{chooseMenuItem?.price}</p>
+            </div>
+            <div className={styles.intro_content_quote}>
+              <p className='opensans'>{chooseMenuItem?.intro}</p>
+            </div>
           </div>
         </div>
       </div>

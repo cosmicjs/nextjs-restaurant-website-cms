@@ -2,8 +2,7 @@ import cn from 'classnames';
 
 import styles from './styles.module.scss';
 
-const MenuItem = ({title, price, tags}) => {
-  return (
+const MenuItem = ({title, price, tags}) => (
     <div className={styles.menuitem}>
       <div className={styles.menuitem_head}>
         <div className={styles.menuitem_name}>
@@ -18,7 +17,6 @@ const MenuItem = ({title, price, tags}) => {
       <p className='opensans'>{tags}</p>
     </div>
   </div>
-  )
-}
+);
 
 export default MenuItem;

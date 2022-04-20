@@ -3,8 +3,7 @@ import Link from 'next/link';
 
 import styles from './styles.module.scss';
 
-const Footer = ({children}) => {
-  return (
+const Footer = ({children}) => (
     <footer className={styles.footer}>
       {children}
       <Link
@@ -25,7 +24,6 @@ const Footer = ({children}) => {
         </a>
       </Link>
     </footer>
-  )
-}
+);
 
 export default Footer;

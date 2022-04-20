@@ -7,8 +7,7 @@ import Button from 'components/Button';
 import images from 'constants/images';
 import styles from './styles.module.scss';
 
-const Header = ({ info }) => {
-  return (
+const Header = ({ info }) => (
     <div className={cn(styles.header, 'section_padding')} id='home'>
       <div className={cn('app_container', 'app_wrapper')}>
         <div className={styles.wrapper_info}>
@@ -30,7 +29,6 @@ const Header = ({ info }) => {
         </div>
       </div>
     </div>
-  )
-};
+);
 
 export default Header;
