@@ -13,7 +13,7 @@ To build this app, we’re going to use the following technologies:
 
 
 ### Screenshots
-![template](https://user-images.githubusercontent.com/34789741/164302224-483d19df-4e68-472c-b578-b0a2741f97b8.gif)
+![template](https://user-images.githubusercontent.com/34789741/164322014-c30d57f2-e00f-42dc-997a-fa4ba39803ce.gif)
 
 ## Getting started
 
