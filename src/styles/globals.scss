@@ -123,6 +123,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 3rem;
 
   width: 100%;
   min-height: 85%;
@@ -187,6 +188,10 @@ a {
   width: 45px;
 }
 
+.app_container {
+  max-width: 1500px;
+}
+
 @media screen and (min-width: 2000px) {
   .custom_button,
   .cormorant {
@@ -200,12 +205,16 @@ a {
   }
 
   .headtext_cormorant {
-    font-size: 150px;
-    line-height: 210px;
+    font-size: 88px;
+    line-height: 80px;
   }
 
   .spoon_img {
     width: 80px;
+  }
+
+  .section_padding {
+    padding: 3rem 10rem;
   }
 }
 

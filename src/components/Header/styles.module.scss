@@ -11,8 +11,8 @@
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: capitalize;
-    line-height: 90px;
-    font-size: 75px;
+    line-height: 98px;
+    font-size: 84px;
   }
 
   .header_p {
@@ -37,14 +37,14 @@
 
 @media screen and (min-width: 2000px) {
   .header_h1 {
-    font-size: 180px;
-    line-height: 210px;
+    font-size: 90px;
+    line-height: 110px;
   }
 }
 
 @media screen and (max-width: 1150px) {
   .header_h1 {
-    font-size: 90px;
+    font-size: 80px;
   }
 }
 
