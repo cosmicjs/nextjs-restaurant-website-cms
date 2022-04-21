@@ -1,6 +1,6 @@
 @import 'styles/variables';
 
-.gallery {
+.gallery_container {
     width: 100%;
     flex-direction: row;
 
@@ -116,7 +116,7 @@
     }
 
     .gallery_content {
-        min-width: 1000px;
+        max-width: 1000px;
         padding-right: 4rem;
     }
 

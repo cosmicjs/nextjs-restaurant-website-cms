@@ -123,7 +123,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
 
   width: 100%;
   min-height: 85%;
@@ -189,7 +189,8 @@ a {
 }
 
 .app_container {
-  max-width: 1500px;
+  max-width: 1700px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 2000px) {
@@ -215,6 +216,10 @@ a {
 
   .section_padding {
     padding: 3rem 10rem;
+  }
+
+  .app_wrapper {
+    gap: 8rem;
   }
 }
 

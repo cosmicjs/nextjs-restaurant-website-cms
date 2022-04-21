@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     background: $color-black;
-    padding: 0 2rem;
+    padding: 0.3rem 3rem;
     max-height: 65px;
     position: fixed;
     top: 0;
@@ -19,13 +19,9 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    width: 170px; 
-    height: 50px;
+    width: 150px; 
+    height: 40px;
     cursor: pointer;
-}
-
-.navbar_logo img {
-    width: 150px;
 }
 
 .navbar_links {

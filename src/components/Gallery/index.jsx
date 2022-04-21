@@ -23,7 +23,7 @@ const Gallery = ({info}) => {
   };
 
   return (
-    <div className={cn(styles.gallery, 'flex_center')} id='gallery'>
+    <div className={cn(styles.gallery_container, 'flex_center')} id='gallery'>
       <div className={styles.gallery_content}>
         <SubHeading title={info?.[0]?.metadata?.section} />
         <h1 className='headtext_cormorant'>{info?.[0]?.metadata?.title}</h1>
