@@ -11,13 +11,14 @@
     align-items: flex-start;
     width: 100%;
 
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .intro_content_quote {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+    margin-top: 2rem;
 }
 
 .intro_sign {
@@ -44,6 +45,15 @@
     position: relative;
     z-index: 99;
     margin: 0 auto;
+}
+
+.intro_tag {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: $color-golden;
+    font-style: italic;
+    font-family: $font-base;
 }
 
 @media screen and (min-width: 2000px) {

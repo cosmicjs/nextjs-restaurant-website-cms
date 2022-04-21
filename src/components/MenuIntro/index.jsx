@@ -28,8 +28,8 @@ const MenuIntro = ({ info, slug }) => {
           <SubHeading title='Try it!' />
           <h1 className='headtext_cormorant'>{chooseMenuItem?.title}</h1>
           <div className={styles.intro_content}>
-            <div className={styles.intro_sign}>
-              <p>{chooseMenuItem?.tags}</p>
+            <div>
+              <p className={styles.intro_tag}>{chooseMenuItem?.tags}</p>
               <p className='opensans'>{chooseMenuItem?.price}</p>
             </div>
             <div className={styles.intro_content_quote}>

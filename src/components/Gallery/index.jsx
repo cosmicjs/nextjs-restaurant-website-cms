@@ -27,7 +27,7 @@ const Gallery = ({info}) => {
       <div className={styles.gallery_content}>
         <SubHeading title={info?.[0]?.metadata?.section} />
         <h1 className='headtext_cormorant'>{info?.[0]?.metadata?.title}</h1>
-        <p className={cn(styles.gallery_content_intro || 'opensans')}>{info?.[0]?.metadata?.intro}</p>
+        <p className={cn(styles.gallery_content_intro, 'opensans')}>{info?.[0]?.metadata?.intro}</p>
         <Button name='View More' path='#menu' />
       </div>
       <div className={styles.gallery_images}>

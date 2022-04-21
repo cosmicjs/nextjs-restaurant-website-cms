@@ -13,7 +13,7 @@ const Contacts = ({ info }) => (
     <div className={cn('app_container', 'app_wrapper')}>
       <div className={cn(styles.contact_info, 'app_wrapper_info')}>
         <SubHeading title={info?.metadata?.section} />
-        <h1 className={cn(styles.header_h1,'headtext_cormorant' )}>{info?.metadata?.title}</h1>
+        <h1 className='headtext_cormorant'>{info?.metadata?.title}</h1>
         <div className={cn(styles.contact_title, 'app_wrapper_content')}>
           <p className='opensans'>{info?.metadata?.intro}</p>
           <div className='app_wrapper_content'>

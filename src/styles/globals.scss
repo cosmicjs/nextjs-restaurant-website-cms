@@ -83,26 +83,26 @@ a {
 }
 
 .custom_button {
-  background-color: $color-crimson;
-  color: $color-black;
+  background-color: transparent;
+  color: $color-golden;
   font-family: $font-base;
   font-weight: 700;
   letter-spacing: 3px;
   line-height: 28px;
   font-size: 16px;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 0.7rem;
   border-radius: 1px;
   border: none;
   outline: none;
   cursor: pointer;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid $color-golden;
 
   &:hover {
-    background-color: transparent;
-    color: $color-golden;
+    background-color: $color-crimson;
+    color: $color-black;
     transform: scale(0.98);
     transition: .3s ease;
-    border-bottom: 3px solid $color-golden;
+    border-bottom: 2px solid transparent;
   }
 }
 
@@ -177,8 +177,8 @@ a {
 .headtext_cormorant {
   font-family: $font-base;
   color: $color-golden;
-  font-size: 68px;
-  line-height: 78px;
+  line-height: 58px;
+  font-size: 46px;
   letter-spacing: 3px;
   text-transform: capitalize;
 }
@@ -201,13 +201,8 @@ a {
   }
 
   .opensans {
-    font-size: 30px;
-    line-height: 50px;
-  }
-
-  .headtext_cormorant {
-    font-size: 72px;
-    line-height: 82px;
+    font-size: 24px;
+    line-height: 42px;
   }
 
   .spoon_img {
@@ -271,7 +266,7 @@ a {
   }
 
   .headtext_cormorant {
-    font-size: 45px;
-    line-height: 60px;
+    font-size: 34px;
+    line-height: 42px;
   }
 }

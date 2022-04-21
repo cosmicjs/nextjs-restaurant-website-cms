@@ -6,16 +6,6 @@
     margin: 0 auto;
   }
 
-  .header_h1 {
-    font-family: $font-base;
-    color: $color-golden;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: capitalize;
-    line-height: 90px;
-    font-size: 75px;
-  }
-
   .contact_hours {
     color: $color-golden; 
     margin: 2rem 0;
@@ -29,6 +19,20 @@
     margin: 1rem 0;
   }
 
-  .contact_info {
-    max-width: 40%;
+  @media screen and (min-width: 2000px) {
+    .contact_info {
+      max-width: 60%;
+    }
   }
+
+  @media screen and (max-width: 1150px) {
+  .contact_info {
+      max-width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+  .contact_info {
+    max-width: 100%;
+  }
+}

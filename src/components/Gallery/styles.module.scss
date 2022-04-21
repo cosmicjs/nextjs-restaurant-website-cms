@@ -95,7 +95,8 @@
 
 .gallery_content_intro {
     color: $color-grey; 
-    margin-top: 2rem;
+    margin: 2rem 0;
+    max-width: 85%;
 }
 
 .gallery_arrow_icon {
@@ -116,10 +117,13 @@
     }
 
     .gallery_content {
-        max-width: 1000px;
+        min-width: 700px;
         padding-right: 4rem;
     }
 
+    .gallery_images {
+        max-width: 60%;
+    }
     .gallery_images_card {
         min-width: 400px;
         height: 547px;
@@ -127,7 +131,7 @@
 }
 
 @media screen and (max-width: 1150px) {
-    .gallery {
+    .gallery_container {
         flex-direction: column;
     }
 
@@ -138,13 +142,13 @@
 }
 
 @media screen and (max-width: 850px) {
-    .gallery {
+    .gallery_container {
         padding: 4rem 0 4rem 4rem;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .gallery {
+    .gallery_container {
         padding: 4rem 0 4rem 2rem;
     }  
     
