@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import cn from 'classnames';
 
 import SubHeading from 'components/SubHeading';
 import Button from 'components/Button';
 import images from 'constants/images';
+
 import styles from './styles.module.scss';
 
-const Header = ({ info }) => (
+const Home = ({ info }) => (
     <div className={cn(styles.header, 'section_padding')} id='home'>
       <div className={cn('app_container', 'app_wrapper')}>
         <div className={styles.wrapper_info}>
@@ -22,7 +22,7 @@ const Header = ({ info }) => (
               src={info?.metadata?.baner?.imgix_url || images?.header}
               alt='header_img'
               objectFit='cover'
-              width={600}
+              width={550}
               height={500}
               />
           </div>
@@ -31,4 +31,4 @@ const Header = ({ info }) => (
     </div>
 );
 
-export default Header;
+export default Home;

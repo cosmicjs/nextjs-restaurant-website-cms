@@ -26,7 +26,7 @@ const SpacialMenu = ({ info }) => {
           <div className={styles.special_menu_items}>
           {food?.metadata?.menu?.map(({title, slug, price, tags}) => (
             <div key={slug}>
-              <Link href={info ? `/menu/${slug}?#menu-intro` : '#menu'} passHref>
+              <Link href={info ? `/menu/${slug}?#menu-intro` : '/#menu'} passHref>
                 <a>
                   <MenuItem title={title} price={price} tags={tags} />
                 </a>
@@ -36,14 +36,14 @@ const SpacialMenu = ({ info }) => {
         </div>
       </div>}
       <div className={styles.special_menu_img}>
-        <Image src={food?.metadata?.section?.[0]?.metadata?.picture?.imgix_url || images.menu} objectFit='contain' layout='fill' alt='menu_img' />
+        <Image src={food?.metadata?.section?.[0]?.metadata?.picture?.imgix_url || images?.menu} objectFit='contain' layout='fill' alt='menu_img' />
       </div>
       {drink && <div className={cn(styles.special_menu_cocktails,  'flex_center')}>
         <p className={styles.special_menu_heading}>{drink?.metadata?.title}</p>
         <div className={styles.special_menu_items}>
           {drink?.metadata?.menu?.map(({title, slug, price, tags}) => (
             <div key={slug}>
-              <Link href={info ? `/menu/${slug}?#menu-intro` : '#menu'} passHref>
+              <Link href={info ? `/menu/${slug}?#menu-intro` : '/#menu'} passHref>
                 <a>
                   <MenuItem title={title} price={price} tags={tags} />
                 </a>

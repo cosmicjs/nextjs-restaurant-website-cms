@@ -1,12 +1,17 @@
 @import 'styles/variables';
 
-.navbar {
+.navbar_container {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: $color-black;
-    padding: 0.7rem 2rem;
+    padding: 0 2rem;
+    max-height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
 }
 
 .navbar_logo {
@@ -16,6 +21,7 @@
     position: relative;
     width: 170px; 
     height: 50px;
+    cursor: pointer;
 }
 
 .navbar_logo img {
@@ -28,6 +34,7 @@
     justify-content: center;
     align-items: center;
     list-style: none;
+    cursor: pointer;
 }
 
 .navbar_links li {

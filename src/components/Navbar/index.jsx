@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
-import { images } from 'constants';
+import images from 'constants/images';
 
 import styles from './styles.module.scss';
 
@@ -19,8 +19,8 @@ const Navbar = ({ navbarInfo }) => {
   };
   
   return (
-    <nav className={styles.navbar}>
-      <Link href='/' passHref>
+    <nav className={styles.navbar_container} id='navigation'>
+      <Link href='/#home' passHref>
         <div className={styles.navbar_logo}>
           <Image
             src={navbarInfo?.metadata?.logo?.imgix_url || images?.gericht}
@@ -40,7 +40,7 @@ const Navbar = ({ navbarInfo }) => {
       </ul>
       <div className={styles.navbar_login}>
         <p className={cn(styles.menu_item,'opensans')}>
-          <Link href='#contact' passHref>{navbarInfo?.metadata?.action}</Link>
+          <Link href='#contact' passHref>{navbarInfo?.metadata?.action || ''}</Link>
         </p>
       </div>
       <div className={styles.navbar_smallscreen}>
@@ -52,7 +52,7 @@ const Navbar = ({ navbarInfo }) => {
               {navbarItems?.map((item, index) => (
                 <li onClick={handleToggle} key={index}>
                   <Link href={navbarInfo ? `/#${item?.toLowerCase()}` : '#contact'} passHref>
-                  <a>{item}</a>
+                    <a>{item}</a>
                   </Link>
                 </li>
               ))}

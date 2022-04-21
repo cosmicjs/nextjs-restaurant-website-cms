@@ -8,10 +8,10 @@ import images from 'constants/images';
 
 import styles from './styles.module.scss';
 
-const Contacts = ({info}) => (
+const Contacts = ({ info }) => (
   <div className={cn('app_bg', 'app_wrapper', 'section_padding')} id='contact'>
     <div className={cn('app_container', 'app_wrapper')}>
-      <div className='app_wrapper_info'>
+      <div className={cn(styles.contact_info, 'app_wrapper_info')}>
         <SubHeading title={info?.metadata?.section} />
         <h1 className={cn(styles.header_h1,'headtext_cormorant' )}>{info?.metadata?.title}</h1>
         <div className={cn(styles.contact_title, 'app_wrapper_content')}>
@@ -30,11 +30,11 @@ const Contacts = ({info}) => (
       <div className='app_wrapper_img'>
         <div className={cn(styles.wrapper_img, 'img_padding')} >
           <Image
-            src={info?.metadata?.picture?.imgix_url || images.laurels}
+            src={info?.metadata?.picture?.imgix_url || images?.laurels}
             alt='find_us_img'
             objectFit='contain'
-            width={550}
-            height={600} />
+            width={500}
+            height={550} />
         </div>
       </div>
     </div>

@@ -2,12 +2,12 @@
 
 To build this app, we’re going to use the following technologies:
 
-- [Next.js](https://nextjs.org/docs) - A React framework that makes it easy to spin up a full-stack application.
-- [Cosmic](https://www.cosmicjs.com/) - A Headless CMS that gives us the ability to quickly manage our content.
+- [Next.js](https://nextjs.org/docs) - A React framework for production that makes it easy to spin up a full-stack application.
+- [Cosmic](https://www.cosmicjs.com/) - A Headless CMS enables the independence of the data (content) layer and gives us the ability to quickly manage template content.
 - [Sass](https://sass-lang.com/) -  A stable, and powerful professional-grade CSS extension language.
 
 ### Links
-- [Install the App Template -](https://www.notion.so/url) 
+- [Install the App Template ](link) 
 - [Check out the code](https://github.com/naira-ge/nextjs-restaurant-cms)
 - [View the live demo](https://nextjs-restaurant-cms.vercel.app/)
 
@@ -40,9 +40,10 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 You'll need to create an .env file in the root of the project. Loging to Cosmic and from Bucket Settings > API Access take the following values:
 
 ```bash
-BUCKET_SLUG=your_cosmic_bucket_slug
-READ_KEY=your_cosmic_read_key
-WRITE_KEY=your_cosmic_write_key
+//.env
+COSMIC_BUCKET_SLUG=your_cosmic_slug
+COSMIC_READ_KEY=your_cosmic_read_key
+COSMIC_PREVIEW_SECRET=your_cosmic_secret_key
 ```
 
 ## Deploy on Vercel

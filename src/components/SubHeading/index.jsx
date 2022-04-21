@@ -1,7 +1,4 @@
-import Image from 'next/image';
 import LineBreak from 'components/SubHeading/LineBreak';
-
-import images from 'constants/images';
 
 import styles from './styles.module.scss';
 

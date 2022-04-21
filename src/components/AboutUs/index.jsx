@@ -12,7 +12,7 @@ const AboutUs = ({ info }) => {
     <div className={cn( styles.about,'app_bg','flex_center','section_padding' )} id='about'>
       <div className={cn( styles.about_overlay,'flex_center' )}>
         <div className={styles.about_overlay_img}>
-          <Image src={info?.metadata?.initials?.imgix_url || images.G} layout='fill' objectFit='cover' alt='overlay' />
+          <Image src={info?.metadata?.initials?.imgix_url || images?.G} layout='fill' objectFit='cover' alt='overlay' />
         </div>
       </div>
       <div className={cn(styles.about_content, 'flex_center')}>
@@ -24,7 +24,7 @@ const AboutUs = ({ info }) => {
         </div>
         <div className={cn(styles.about_content_knife, 'flex_center')}>
           <div className={styles.about_content_img}>
-            <Image src={info?.metadata?.picture?.imgix_url || images.knife} layout='fill' objectFit='contain' alt='about_knife' />
+            <Image src={info?.metadata?.picture?.imgix_url || images?.knife} layout='fill' objectFit='contain' alt='about_knife' />
           </div>
         </div>
         <div className={styles.about_content_history}>

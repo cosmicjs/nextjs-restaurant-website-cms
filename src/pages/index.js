@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Header from 'components/Header';
+import Home from 'components/Home';
 import Layout from 'components/Layout';
 import Footer from 'components/Footer';
 import AboutUs from 'components/AboutUs';
@@ -12,7 +12,7 @@ import Contacts from 'components/Contact';
 import { getDataFromBucket } from 'lib/api';
 import chooseByType from 'utils/chooseValueByType';
 
-function Home({ data }) {
+function Template({ data }) {
   return (
     <>
       <Head>
@@ -21,7 +21,7 @@ function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout navbar={chooseByType(data, 'navigation')}>
-        <Header info={chooseByType(data, 'header')}/>
+        <Home info={chooseByType(data, 'header')}/>
         <AboutUs info={chooseByType(data, 'about')}/>
         <SpacialMenu info={[chooseByType(data, 'drink'), chooseByType(data, 'food')]}/>
         <Introduction info={chooseByType(data, 'history')}/>
@@ -42,4 +42,4 @@ export async function getStaticProps({ preview }) {
   }
 }
 
-export default Home;
+export default Template;

@@ -12,7 +12,7 @@ const Introduction = ({ info }) => {
       <div className={cn('app_wrapper_img','app_wrapper_img_reverse')}>
         <div className={cn(styles.wrapper_img, 'img_padding')} >
           <Image
-            src={info?.metadata?.picture?.imgix_url || images.chef}
+            src={info?.metadata?.picture?.imgix_url || images?.chef}
             alt='intro_image'
             objectFit='cover'
             width={550}
@@ -31,7 +31,7 @@ const Introduction = ({ info }) => {
         <div className={styles.intro_sign}>
           <p>{info?.metadata?.sub_info}</p>
           <p className='opensans'>Chef & Founder</p>
-          <Image width={200} height={100} src={images.sign} alt='sign_image' objectFit='contain' />
+          <Image width={200} height={100} src={images?.sign || images?.logo} alt='sign_image' objectFit='contain' />
         </div>
       </div>
     </div>

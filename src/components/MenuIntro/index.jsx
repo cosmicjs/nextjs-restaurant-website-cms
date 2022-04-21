@@ -16,11 +16,11 @@ const MenuIntro = ({ info, slug }) => {
         <div className={cn('app_wrapper_img','app_wrapper_img_reverse')}>
           <div className={cn(styles.wrapper_img, 'img_padding')} >
             <Image
-              src={chooseMenuItem?.picture?.imgix_url || images.chef}
+              src={chooseMenuItem?.picture?.imgix_url || images?.chef}
               alt='intro_image'
               objectFit='cover'
-              width={550}
-              height={600}
+              width={500}
+              height={550}
               />
           </div>
         </div>
