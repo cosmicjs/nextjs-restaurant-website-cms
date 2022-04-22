@@ -28,6 +28,27 @@ a {
   text-decoration: none;
 }
 
+/* Scrollbar works on Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: $color-black $color-gray;
+}
+
+/* Scrollbar works on Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+  background: $color-black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $color-gray;
+  border-radius: 20px;
+  border: 3px solid $color-black;
+}
+
 .slide_bottom {
   -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -68,8 +89,8 @@ a {
   letter-spacing: 3px;
   text-transform: capitalize;
   font-feature-settings: "tnum" on, "lnum" on;
-  line-height: 29.9px;
-  font-size: 23px;
+  line-height: 26px;
+  font-size: 20px;
 }
 
 .opensans {
@@ -78,31 +99,32 @@ a {
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: capitalize;
-  line-height: 28px;
-  font-size: 16px;
+  line-height: 24px;
+  font-size: 14px;
 }
 
 .custom_button {
   background-color: transparent;
   color: $color-golden;
   font-family: $font-base;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 3px;
-  line-height: 28px;
+  line-height: 22px;
   font-size: 16px;
-  padding: 0.5rem 0.7rem;
+  padding: 0.5rem;
   border-radius: 1px;
   border: none;
   outline: none;
   cursor: pointer;
-  border-bottom: 2px solid $color-golden;
+  border-bottom: 1px solid $color-golden;
+  text-align: center;
 
   &:hover {
     background-color: $color-crimson;
     color: $color-black;
     transform: scale(0.98);
-    transition: .3s ease;
-    border-bottom: 2px solid transparent;
+    transition: .4s ease;
+    border-bottom: 1px solid transparent;
   }
 }
 
@@ -177,7 +199,7 @@ a {
 .headtext_cormorant {
   font-family: $font-base;
   color: $color-golden;
-  line-height: 58px;
+  line-height: 50px;
   font-size: 46px;
   letter-spacing: 3px;
   text-transform: capitalize;
@@ -194,15 +216,15 @@ a {
 }
 
 @media screen and (min-width: 2000px) {
-  .custom_button,
-  .cormorant {
-    font-size: 37px;
-    line-height: 67px;
+  .custom_button {
+    line-height: 26px;
+    font-size: 18px;
   }
 
-  .opensans {
-    font-size: 24px;
-    line-height: 42px;
+
+  .cormorant {
+    line-height: 28px;
+    font-size: 22px;
   }
 
   .spoon_img {
@@ -244,15 +266,19 @@ a {
 
 @media screen and (max-width: 650px) {
   .section_padding {
-    padding: 4rem 2rem;
+    padding: 1rem 2rem;
   }
   
   .cormorant {
-    font-size: 21px;
+    font-size: 18px;
   }
 
   .opensans {
     font-size: 14px;
+  }
+
+  .app_wrapper {
+    gap: 0.5rem;
   }
 }
 
@@ -261,12 +287,20 @@ a {
     font-size: 12px;
   }
 
+  .section_padding {
+    padding: 1rem 1.5rem;
+  }
+
   .cormorant {
-    font-size: 19px;
+    font-size: 16px;
   }
 
   .headtext_cormorant {
-    font-size: 34px;
-    line-height: 42px;
+    line-height: 38px;
+    font-size: 28px;
+  }
+
+  .app_wrapper {
+    gap: 0.2rem;
   }
 }

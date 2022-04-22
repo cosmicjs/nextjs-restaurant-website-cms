@@ -22,7 +22,7 @@ const Home = ({ info }) => (
               src={info?.metadata?.baner?.imgix_url || images?.header}
               alt='header_img'
               objectFit='cover'
-              width={550}
+              width={450}
               height={500}
               />
           </div>

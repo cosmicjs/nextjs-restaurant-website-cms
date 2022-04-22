@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     background: $color-black;
-    padding: 0.3rem 3rem;
+    padding: 0.3rem 2rem;
     max-height: 65px;
     position: fixed;
     top: 0;
@@ -122,7 +122,12 @@
 
 @media screen and (min-width: 2000px) {
     .navbar_logo img {
-        width: 210px;
+        width: 190px;
+        height: 55px;
+    }
+
+    .navbar_container {
+        padding: 0.5rem 3rem;
     }
 }
 
@@ -152,5 +157,6 @@
 
     .navbar_logo img {
         width: 110px;
+        height: 35px;
     }
 }

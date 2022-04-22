@@ -19,8 +19,8 @@ const Contacts = ({ info }) => (
           <div className='app_wrapper_content'>
             <p className='opensans'>{info?.metadata?.details?.[1]?.intro}</p>
           </div>
-          <p className={cn( styles.contact_hours,'cormorant' )}>{info?.metadata?.details?.[0]?.title}</p>
-          <p className='opensans'>{info?.metadata?.details?.[0]?.intro}</p>
+          <p className={cn(styles.contact_hours,'cormorant')}>{info?.metadata?.details?.[0]?.title}</p>
+          <p className={cn(styles.contact_title,'opensans')}>{info?.metadata?.details?.[0]?.intro}</p>
         </div>
         <h1 className={cn(styles.follow_title,'headtext_cormorant' )}>{info?.metadata?.details?.[1]?.title}</h1>
         <div className={styles.contact_social}>

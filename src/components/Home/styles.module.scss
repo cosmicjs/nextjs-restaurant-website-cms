@@ -11,8 +11,8 @@
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: capitalize;
-    line-height: 72px;
-    font-size: 60px;
+    line-height: 58px;
+    font-size: 48px;
   }
 
   .header_p {
@@ -37,27 +37,21 @@
 
 @media screen and (min-width: 2000px) {
   .header_h1 {
-    line-height: 78px;
-    font-size: 64px;
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  .header_h1 {
-    font-size: 62px;
+    line-height: 62px;
+    font-size: 52px;
   }
 }
 
 @media screen and (max-width: 650px) {
   .header_h1 {
-    font-size: 42px;
-    line-height: 52px;
+    line-height: 46px;
+    font-size: 32px;
   }
 }
 
 @media screen and (max-width: 450px) {
   .header_h1 {
-    font-size: 50px;
-    line-height: 70px;
+    line-height: 38px;
+    font-size: 28px;
   }
 }
