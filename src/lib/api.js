@@ -10,22 +10,6 @@ const bucket = Cosmic().bucket({
 
 const is404 = (error) => /not found/i.test(error.message);
 
-export async function getPreviewDataBySlug(slug) {
-  const params = {
-    slug: slug || BUCKET_SLUG,
-    props: 'slug',
-    status: 'all',
-  }
-
-  try {
-    const data = await bucket.getObject(params)
-    return data.object
-  } catch (error) {
-    if (is404(error)) return
-    throw error
-  }
-}
-
 export async function getAllDataWithSlug() {
   const params = {
     type: 'menu',
