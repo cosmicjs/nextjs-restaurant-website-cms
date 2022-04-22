@@ -43,7 +43,6 @@ You'll need to create an .env file in the root of the project. Loging to Cosmic 
 //.env
 COSMIC_BUCKET_SLUG=your_cosmic_slug
 COSMIC_READ_KEY=your_cosmic_read_key
-COSMIC_PREVIEW_SECRET=your_cosmic_secret_key
 ```
 
 ## Deploy on Vercel
