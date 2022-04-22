@@ -1,4 +1,4 @@
-## Restaurant Website with Next.js and Cosmic
+# Restaurant Website with Next.js and Cosmic
 
 To build this app, we’re going to use the following technologies:
 
