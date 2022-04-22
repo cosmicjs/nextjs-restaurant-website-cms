@@ -7,9 +7,9 @@ To build this app, we’re going to use the following technologies:
 - [Sass](https://sass-lang.com/) -  A stable, and powerful professional-grade CSS extension language.
 
 ### Links
-- [Install the App Template ](link) 
-- [Check out the code](https://github.com/naira-ge/nextjs-restaurant-cms)
-- [View the live demo](https://nextjs-restaurant-cms.vercel.app/)
+- [Read how the template was built](https://www.cosmicjs.com/articles/how-to-build-a-restaurant-website-with-nextjs)
+- [Install the App Template ](https://www.cosmicjs.com/apps/nextjs-restaurant-website) 
+- [View the live demo](https://nextjs-restaurant-website-cms.vercel.app/)
 
 
 ### Screenshots
@@ -43,7 +43,6 @@ You'll need to create an .env file in the root of the project. Loging to Cosmic 
 //.env
 COSMIC_BUCKET_SLUG=your_cosmic_slug
 COSMIC_READ_KEY=your_cosmic_read_key
-COSMIC_PREVIEW_SECRET=your_cosmic_secret_key
 ```
 
 ## Deploy on Vercel
