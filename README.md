@@ -7,9 +7,9 @@ To build this app, we’re going to use the following technologies:
 - [Sass](https://sass-lang.com/) -  A stable, and powerful professional-grade CSS extension language.
 
 ### Links
-- [Install the App Template ](link) 
-- [Check out the code](https://github.com/naira-ge/nextjs-restaurant-cms)
-- [View the live demo](https://nextjs-restaurant-cms.vercel.app/)
+- [Read how the template was built](https://www.cosmicjs.com/articles/how-to-build-a-restaurant-website-with-nextjs)
+- [Install the App Template ](https://www.cosmicjs.com/apps/nextjs-restaurant-website) 
+- [View the live demo](https://nextjs-restaurant-website-cms.vercel.app/)
 
 
 ### Screenshots
