@@ -1,18 +1,20 @@
 @import 'styles/variables';
 
-.menuitem {
+.menuitem_container {
     width: 100%;
     margin: 1rem 0;
 
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid transparent;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 5px;
 
     &:hover {
     color: $color-golden;
     transform: scale(0.98);
     transition: .3s ease;
-    border-bottom: 2px solid $color-golden;
+    border-bottom: 1px solid $color-golden;
+    padding-bottom: 5px;
 
         .menuitem_title {
             color: $color-golden;

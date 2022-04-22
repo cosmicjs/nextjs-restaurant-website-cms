@@ -2,8 +2,8 @@ import cn from 'classnames';
 
 import styles from './styles.module.scss';
 
-const MenuItem = ({title, price, tags}) => (
-    <div className={styles.menuitem}>
+const MenuItem = ( { title,price,tags } ) => (
+    <div className={styles.menuitem_container}>
       <div className={styles.menuitem_head}>
         <div className={styles.menuitem_name}>
         <p className={cn(styles.menuitem_title, 'cormorant')}>{title}</p>

@@ -25,7 +25,7 @@ const SpacialMenu = ({ info }) => {
           <p className={styles.special_menu_heading}>{food?.metadata?.title}</p>
           <div className={styles.special_menu_items}>
           {food?.metadata?.menu?.map(({title, slug, price, tags}) => (
-            <div key={slug}>
+            <div className={styles.menu_item_wrapper} key={slug}>
               <Link href={info ? `/menu/${slug}?#menu-intro` : '/#menu'} passHref>
                 <a>
                   <MenuItem title={title} price={price} tags={tags} />

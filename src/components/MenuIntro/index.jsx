@@ -19,12 +19,12 @@ const MenuIntro = ({ info, slug }) => {
               src={chooseMenuItem?.picture?.imgix_url || images?.chef}
               alt='intro_image'
               objectFit='cover'
-              width={500}
-              height={550}
+              width={450}
+              height={500}
               />
           </div>
         </div>
-        <div className='app_wrapper_info'>
+        <div className={cn(styles.wrapper_content,'app_wrapper_info')}>
           <SubHeading title='Try it!' />
           <h1 className='headtext_cormorant'>{chooseMenuItem?.title}</h1>
           <div className={styles.intro_content}>

@@ -5,11 +5,11 @@
 }
 
 .intro_content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 100%;
 
     margin-top: 1.5rem;
 }
@@ -45,6 +45,11 @@
     position: relative;
     z-index: 99;
     margin: 0 auto;
+}
+
+.wrapper_content {
+    justify-content: flex-start;
+    margin-bottom: 4rem;
 }
 
 .intro_tag {

@@ -86,7 +86,6 @@ body::-webkit-scrollbar-thumb {
   font-family: $font-base;
   color: $color-white;
   font-weight: 700;
-  letter-spacing: 3px;
   text-transform: capitalize;
   font-feature-settings: "tnum" on, "lnum" on;
   line-height: 26px;
@@ -97,7 +96,7 @@ body::-webkit-scrollbar-thumb {
   font-family: $font-alt;
   color: $color-white;
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   text-transform: capitalize;
   line-height: 24px;
   font-size: 14px;
@@ -105,11 +104,11 @@ body::-webkit-scrollbar-thumb {
 
 .custom_button {
   background-color: transparent;
-  color: $color-golden;
   font-family: $font-base;
-  font-weight: 600;
-  letter-spacing: 3px;
-  line-height: 22px;
+  color: $color-golden;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 20px;
   font-size: 16px;
   padding: 0.5rem;
   border-radius: 1px;
@@ -201,7 +200,6 @@ body::-webkit-scrollbar-thumb {
   color: $color-golden;
   line-height: 50px;
   font-size: 46px;
-  letter-spacing: 3px;
   text-transform: capitalize;
 }
 
