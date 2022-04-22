@@ -11,8 +11,6 @@ To build this app, we’re going to use the following technologies:
 - [Install the App Template ](https://www.cosmicjs.com/apps/nextjs-restaurant-website) 
 - [View the live demo](https://nextjs-restaurant-website-cms.vercel.app/)
 
-
-### Screenshots
 ![template](https://user-images.githubusercontent.com/34789741/164322014-c30d57f2-e00f-42dc-997a-fa4ba39803ce.gif)
 
 ## Getting started
