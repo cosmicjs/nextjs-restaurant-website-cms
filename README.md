@@ -15,7 +15,17 @@ To build this app, we’re going to use the following technologies:
 
 ## Getting started
 
-First, install the dependencies with
+### Environment Variables
+
+You'll need to create an .env file in the root of the project. Log in to Cosmic and from Bucket Settings > API Access take the following values:
+
+```bash
+//.env
+COSMIC_BUCKET_SLUG=your_cosmic_slug
+COSMIC_READ_KEY=your_cosmic_read_key
+```
+
+Install the dependencies with
 ```bash
 npm install
 # or
@@ -33,15 +43,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Environment Variables
-
-You'll need to create an .env file in the root of the project. Loging to Cosmic and from Bucket Settings > API Access take the following values:
-
-```bash
-//.env
-COSMIC_BUCKET_SLUG=your_cosmic_slug
-COSMIC_READ_KEY=your_cosmic_read_key
-```
 
 ## Deploy on Vercel
 
