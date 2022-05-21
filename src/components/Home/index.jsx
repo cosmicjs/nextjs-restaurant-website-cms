@@ -23,6 +23,7 @@ const Home = ( { info } ) => (
               objectFit='cover'
               width={450}
               height={500}
+              priority
               />
           </div>
         </div>
