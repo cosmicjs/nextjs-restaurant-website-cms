@@ -11,9 +11,7 @@ import styles from './styles.module.scss';
 
 const SpacialMenu = ({ info }) => {
   const food = chooseByType(info, 'food');
-  const drink = chooseByType( info,'drink' );
-  
-  console.log( 'info',info );
+  const drink = chooseByType(info, 'drink');
 
   return (
     <div className={cn(styles.special, 'flex_center', 'section_padding')} id='menu'>

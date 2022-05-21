@@ -99,16 +99,16 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 1px;
   text-transform: capitalize;
   line-height: 24px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .custom_button {
   background-color: transparent;
   font-family: $font-base;
   color: $color-golden;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1px;
-  line-height: 20px;
+  line-height: 24px;
   font-size: 16px;
   padding: 0.5rem;
   border-radius: 1px;
@@ -272,7 +272,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   .opensans {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .app_wrapper {
@@ -282,7 +282,7 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 450px) {
   .opensans {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .section_padding {

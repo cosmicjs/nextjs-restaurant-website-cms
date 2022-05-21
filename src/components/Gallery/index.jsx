@@ -36,7 +36,7 @@ const Gallery = ({info}) => {
             <Link key={index} href={info ? `/menu/${slug}?#menu-intro` : '/#gallery'} passHref>
               <a>
                 <div className={cn(styles.gallery_images_card, 'flex_center' )} key={index}>
-                  <Image src={picture?.imgix_url || images?.menu} layout='fill' objectFit='cover' alt='gallery_image' />
+                  <Image src={picture?.imgix_url} layout='fill' objectFit='cover' alt='gallery_image' />
                   <div className={styles.gallery_image_icon}>
                     <BsInstagram />
                     <h3>{title}</h3>

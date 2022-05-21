@@ -4,8 +4,6 @@ import cn from 'classnames';
 import SubHeading from 'components/SubHeading';
 import SocialMedia from 'components/Contact/SocialMedia';
 
-import images from 'constants/images';
-
 import styles from './styles.module.scss';
 
 const Contacts = ({ info }) => (
@@ -30,7 +28,7 @@ const Contacts = ({ info }) => (
       <div className='app_wrapper_img'>
         <div className={cn(styles.wrapper_img, 'img_padding')} >
           <Image
-            src={info?.metadata?.picture?.imgix_url || images?.laurels}
+            src={info?.metadata?.picture?.imgix_url}
             alt='find_us_img'
             objectFit='contain'
             width={500}

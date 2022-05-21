@@ -10,7 +10,7 @@ const VideoIntro = ({url}) => {
 
   const handleVideo = () => {
     setPlayVideo(playVideo => !playVideo);
-    
+
     if (playVideo) {
       videoRef.current.pause();
     } else {
@@ -18,7 +18,7 @@ const VideoIntro = ({url}) => {
     }
   }
 
-  useEffect(() => {    
+  useEffect(() => {
     videoRef.current?.load();
   }, [url]);
 
