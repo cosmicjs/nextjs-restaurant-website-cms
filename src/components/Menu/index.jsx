@@ -6,13 +6,14 @@ import MenuItem from 'components/Menu/Menuitem';
 import Button from 'components/Button';
 
 import chooseByType from 'utils/chooseValueByType';
-import { images } from 'constants';
 
 import styles from './styles.module.scss';
 
 const SpacialMenu = ({ info }) => {
   const food = chooseByType(info, 'food');
-  const drink = chooseByType(info, 'drink');
+  const drink = chooseByType( info,'drink' );
+  
+  console.log( 'info',info );
 
   return (
     <div className={cn(styles.special, 'flex_center', 'section_padding')} id='menu'>
@@ -36,7 +37,7 @@ const SpacialMenu = ({ info }) => {
         </div>
       </div>}
       <div className={styles.special_menu_img}>
-        <Image src={food?.metadata?.section?.[0]?.metadata?.picture?.imgix_url || images?.menu} objectFit='contain' layout='fill' alt='menu_img' />
+        <Image src={food?.metadata?.section?.[0]?.metadata?.picture?.imgix_url} objectFit='contain' layout='fill' alt='menu_img' />
       </div>
       {drink && <div className={cn(styles.special_menu_cocktails,  'flex_center')}>
         <p className={styles.special_menu_heading}>{drink?.metadata?.title}</p>
