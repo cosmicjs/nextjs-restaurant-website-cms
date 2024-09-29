@@ -1,15 +1,11 @@
-import { useRef } from 'react'
+import cn from 'classnames'
 import Image from 'next/image'
 import Link from 'next/link'
-import cn from 'classnames'
-import {
-  BsInstagram,
-  BsArrowLeftShort,
-  BsArrowRightShort,
-} from 'react-icons/bs'
+import { useRef } from 'react'
+import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 
-import SubHeading from 'components/SubHeading'
 import Button from 'components/Button'
+import SubHeading from 'components/SubHeading'
 
 import styles from './styles.module.scss'
 
@@ -46,24 +42,24 @@ const Gallery = ({ info }) => {
                 href={info ? `/menu/${slug}?#menu-intro` : '/#gallery'}
                 passHref
               >
-                <a>
-                  <div
-                    className={cn(styles.gallery_images_card, 'flex_center')}
-                    key={index}
-                  >
-                    <Image
-                      src={metadata?.picture?.imgix_url}
-                      layout="fill"
-                      objectFit="cover"
-                      alt="gallery_image"
-                    />
-                    <div className={styles.gallery_image_icon}>
-                      <BsInstagram />
-                      <h3>{title}</h3>
-                      <h4>{metadata?.price}</h4>
-                    </div>
+                {/* <a> */}
+                <div
+                  className={cn(styles.gallery_images_card, 'flex_center')}
+                  key={index}
+                >
+                  <Image
+                    src={metadata?.picture?.imgix_url}
+                    layout="fill"
+                    objectFit="cover"
+                    alt="gallery_image"
+                  />
+                  <div className={styles.gallery_image_icon}>
+                    {/* <BsInstagram /> */}
+                    <h3>{title}</h3>
+                    <h4>{metadata?.price}</h4>
                   </div>
-                </a>
+                </div>
+                {/* </a> */}
               </Link>
             )
           )}

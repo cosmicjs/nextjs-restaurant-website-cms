@@ -1,28 +1,23 @@
-import Head from 'next/head'
-import Home from 'components/Home'
-import Layout from 'components/Layout'
-import Footer from 'components/Footer'
 import AboutUs from 'components/AboutUs'
-import SpacialMenu from 'components/Menu'
-import Introduction from 'components/Introduction'
-import VideoIntro from 'components/VideoIntro'
-import Gallery from 'components/Gallery'
 import Contacts from 'components/Contact'
+import Footer from 'components/Footer'
+import Gallery from 'components/Gallery'
+import Home from 'components/Home'
+import Introduction from 'components/Introduction'
+import Layout from 'components/Layout'
+import SpacialMenu from 'components/Menu'
+import VideoIntro from 'components/VideoIntro'
+import Head from 'next/head'
 
 import { getDataFromBucket } from 'lib/api'
 import chooseByType from 'utils/chooseValueByType'
 
-function Template({ data }) {
-  // console.log(`data: ${JSON.stringify(data)}`)
-
+function TopPage({ data }) {
   return (
     <>
       <Head>
-        <title>Next.js Restaurant CMS</title>
-        <meta
-          name="description"
-          content="Create template using cosmic.js CMS"
-        />
+        <title>1989s craftbeer</title>
+        <meta name="description" content="Da Nang local craft beer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout navbar={chooseByType(data, 'navigation')}>
@@ -31,13 +26,14 @@ function Template({ data }) {
         <SpacialMenu
           info={[chooseByType(data, 'drink'), chooseByType(data, 'food')]}
         />
-        <Introduction info={chooseByType(data, 'history')} />
         <Gallery
-          info={[chooseByType(data, 'gallery'), chooseByType(data, 'food')]}
+          info={[chooseByType(data, 'gallery'), chooseByType(data, 'drink')]}
+          // info={data}
         />
+        <VideoIntro url={chooseByType(data, 'video')} />
       </Layout>
       <Footer>
-        <VideoIntro url={chooseByType(data, 'video')} />
+        <Introduction info={chooseByType(data, 'history')} />
         <Contacts info={chooseByType(data, 'contact')} />
       </Footer>
     </>
@@ -45,12 +41,10 @@ function Template({ data }) {
 }
 
 export async function getStaticProps({ preview }) {
-  console.log(`preview: ${JSON.stringify(preview)}`)
-
   const data = (await getDataFromBucket(preview)) || []
   return {
     props: { data },
   }
 }
 
-export default Template
+export default TopPage

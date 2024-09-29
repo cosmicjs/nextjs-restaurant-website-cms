@@ -27,14 +27,14 @@ const SpacialMenu = ({ info }) => {
         </h1>
       </div>
       <div className={styles.special_menu}>
-        {food && (
+        {drink && (
           <div className={cn(styles.special_menu_wine, 'flex_center')}>
             <p className={styles.special_menu_heading}>
-              {food?.metadata?.title}
+              {drink?.metadata?.title}
             </p>
             <div className={styles.special_menu_items}>
               {/* {food?.metadata?.menu?.map(({ title, slug, price, tags }) => ( */}
-              {food?.metadata?.menu?.map(({ metadata, title, slug }) => (
+              {drink?.metadata?.menu?.map(({ metadata, title, slug }) => (
                 <div className={styles.menu_item_wrapper} key={slug}>
                   <Link
                     href={info ? `/menu/${slug}?#menu-intro` : '/#menu'}
@@ -61,14 +61,14 @@ const SpacialMenu = ({ info }) => {
             alt="menu_img"
           />
         </div>
-        {drink && (
+        {food && (
           <div className={cn(styles.special_menu_cocktails, 'flex_center')}>
             <p className={styles.special_menu_heading}>
-              {drink?.metadata?.title}
+              {food?.metadata?.title}
             </p>
             <div className={styles.special_menu_items}>
               {/* {drink?.metadata?.menu?.map(({ title, slug, price, tags }) => ( */}
-              {drink?.metadata?.menu?.map(({ metadata, title, slug }) => (
+              {food?.metadata?.menu?.map(({ metadata, title, slug }) => (
                 <div key={slug}>
                   <Link
                     href={info ? `/menu/${slug}?#menu-intro` : '/#menu'}

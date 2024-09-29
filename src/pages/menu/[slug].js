@@ -1,20 +1,20 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import Head from 'next/head'
+import { useRouter } from 'next/router'
 
-import Layout from 'components/Layout';
-import Footer from 'components/Footer';
-import Contacts from 'components/Contact';
-import MenuIntro from 'components/MenuIntro';
-import VideoIntro from 'components/VideoIntro';
-import Gallery from 'components/Gallery';
+import Contacts from 'components/Contact'
+import Footer from 'components/Footer'
+import Gallery from 'components/Gallery'
+import Layout from 'components/Layout'
+import MenuIntro from 'components/MenuIntro'
+// import VideoIntro from 'components/VideoIntro'
 
-import { getAllDataWithSlug, getDataFromBucket } from 'lib/api';
-import chooseByType from 'utils/chooseValueByType';
+import { getAllDataWithSlug, getDataFromBucket } from 'lib/api'
+import chooseByType from 'utils/chooseValueByType'
 
 function Menu({ data }) {
   const {
     query: { slug },
-  } = useRouter();
+  } = useRouter()
 
   return (
     <>
@@ -28,35 +28,36 @@ function Menu({ data }) {
       </Head>
       <Layout navbar={chooseByType(data, 'navigation')}>
         <MenuIntro
-          info={[chooseByType(data, 'food'), chooseByType(data, 'drink')]}
+          info={[chooseByType(data, 'drink'), chooseByType(data, 'food')]}
           slug={slug}
         />
         <Gallery
           info={[chooseByType(data, 'gallery'), chooseByType(data, 'food')]}
+          // info={data}
         />
       </Layout>
       <Footer>
-        <VideoIntro url={chooseByType(data, 'sushi')} />
+        {/* <VideoIntro url={chooseByType(data, 'sushi')} /> */}
         <Contacts info={chooseByType(data, 'contact')} />
       </Footer>
     </>
-  );
+  )
 }
 
 export async function getStaticProps({ params, preview = null }) {
-  const data = (await getDataFromBucket(preview)) || [];
+  const data = (await getDataFromBucket(preview)) || []
   return {
     props: { data },
-  };
+  }
 }
 
 export async function getStaticPaths() {
-  const dataWithSlug = (await getAllDataWithSlug()) || [];
+  const dataWithSlug = (await getAllDataWithSlug()) || []
 
   return {
     paths: dataWithSlug.map((menu) => `/menu/${menu.slug}`),
     fallback: true,
-  };
+  }
 }
 
-export default Menu;
+export default Menu

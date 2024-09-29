@@ -86,7 +86,7 @@ body::-webkit-scrollbar-thumb {
   font-family: $font-base;
   color: $color-white;
   font-weight: 700;
-  text-transform: capitalize;
+  // text-transform: capitalize;
   font-feature-settings: 'tnum' on, 'lnum' on;
   line-height: 26px;
   font-size: 20px;
@@ -97,7 +97,7 @@ body::-webkit-scrollbar-thumb {
   color: $color-white;
   font-weight: 400;
   letter-spacing: 1px;
-  text-transform: capitalize;
+  // text-transform: capitalize;
   line-height: 24px;
   font-size: 16px;
 }
