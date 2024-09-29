@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cosmicjs/sdk": "^1.2.0",
     "classnames": "^2.3.1",
-    "cosmicjs": "^4.1.5",
     "next": "12.1.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "eslint": "8.12.0",

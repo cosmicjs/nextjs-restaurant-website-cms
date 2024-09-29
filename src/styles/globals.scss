@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 @import 'styles/variables';
 
 *,
@@ -87,7 +87,7 @@ body::-webkit-scrollbar-thumb {
   color: $color-white;
   font-weight: 700;
   text-transform: capitalize;
-  font-feature-settings: "tnum" on, "lnum" on;
+  font-feature-settings: 'tnum' on, 'lnum' on;
   line-height: 26px;
   font-size: 20px;
 }
@@ -122,7 +122,7 @@ body::-webkit-scrollbar-thumb {
     background-color: $color-crimson;
     color: $color-black;
     transform: scale(0.98);
-    transition: .4s ease;
+    transition: 0.4s ease;
     border-bottom: 1px solid transparent;
   }
 }
@@ -145,7 +145,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-around;
   align-items: center;
   gap: 4rem;
-
+  white-space: pre-line;
   width: 100%;
   min-height: 85%;
 }
@@ -168,26 +168,26 @@ body::-webkit-scrollbar-thumb {
   margin-left: 2rem;
 
   &::before {
-      content: '';
-      width: 60%;
-      height: 60%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      background: $color-golden no-repeat center;
-    }
-  
-    &::after {
-      content: '';
-      width: 60%;
-      height: 60%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 1;
-      background: $color-golden no-repeat center;
-    }
+    content: '';
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: $color-golden no-repeat center;
+  }
+
+  &::after {
+    content: '';
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: $color-golden no-repeat center;
+  }
 }
 
 .app_wrapper_img_reverse {
@@ -218,7 +218,6 @@ body::-webkit-scrollbar-thumb {
     line-height: 26px;
     font-size: 18px;
   }
-
 
   .cormorant {
     line-height: 28px;
@@ -266,7 +265,7 @@ body::-webkit-scrollbar-thumb {
   .section_padding {
     padding: 1rem 2rem;
   }
-  
+
   .cormorant {
     font-size: 18px;
   }
