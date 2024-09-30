@@ -1,41 +1,41 @@
 @import 'styles/variables';
 
-  .wrapper_img {
-    position: relative;
-    z-index: 99;
-    margin: 0 auto;
-  }
+// .wrapper_img {
+//   position: relative;
+//   z-index: 99;
+//   margin: 0 auto;
+// }
 
-  .contact_hours {
-    color: $color-golden; 
-    margin: 2rem 0;
-  }
+.contact_hours {
+  color: $color-golden;
+  margin: 2rem 0;
+}
 
-  .follow_title {
-    margin-top: 3.5rem;
-  }
+.follow_title {
+  margin-top: 3.5rem;
+}
 
-  .contact_social {
-    margin: 1rem 0;
-  }
+.contact_social {
+  margin: 1rem 0;
+}
 
-  .contact_title {
-    margin-top: 1rem;
-  }
+.contact_title {
+  margin-top: 1rem;
+}
 
-  @media screen and (min-width: 2000px) {
-    .contact_info {
-      max-width: 60%;
-    }
-  }
-
-  @media screen and (max-width: 1150px) {
+@media screen and (min-width: 2000px) {
   .contact_info {
-      max-width: 80%;
-    }
+    max-width: 80%;
   }
+}
 
-  @media screen and (max-width: 850px) {
+@media screen and (max-width: 1150px) {
+  .contact_info {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 850px) {
   .contact_info {
     max-width: 100%;
   }

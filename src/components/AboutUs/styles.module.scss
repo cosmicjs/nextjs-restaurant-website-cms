@@ -1,86 +1,86 @@
 @import 'styles/variables';
 
 .about {
-    position: relative;
+  position: relative;
 }
 
 .about_overlay {
-    position: absolute;
-    inset: 0;
+  position: absolute;
+  inset: 0;
 }
 
 .about_overlay_img {
-    position: relative;
-    width: 391px;
-    height: 415px;
-    z-index: 0;
+  position: relative;
+  width: 391px;
+  height: 415px;
+  z-index: 0;
 }
 
 .about_content {
-    width: 100%;
-    z-index: 2;
+  width: 100%;
+  z-index: 2;
 }
 
 .about_content_about {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
 
-    text-align: right;
+  text-align: right;
 }
 
 .about_content_knife {
-    margin: 2rem 4rem;
+  margin: 2rem 4rem;
 }
 
 .about_content_img {
-    position: relative;
-    width: 150px;
-    height: 750px;
+  position: relative;
+  width: 150px;
+  height: 150px;
 }
 
 .about_content_history {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 
-    text-align: left;
+  text-align: left;
 }
 
 .about_content_about p,
 .about_content_history p {
-    margin: 2rem 0;
-    color: $color-grey;
+  margin: 2rem 0;
+  color: $color-grey;
 }
 
 @media screen and (min-width: 2000px) {
-    .about_content_knife img {
-        height: 1110px;
-    }
+  .about_content_knife img {
+    height: 1110px;
+  }
 
-    .about_content_about p,
-    .about_content_history p {
-        margin: 4rem 0;
-    }
+  .about_content_about p,
+  .about_content_history p {
+    margin: 4rem 0;
+  }
 }
 
 @media screen and (max-width: 900px) {
-    .about_content {
-        flex-direction: column;
-    }
+  .about_content {
+    flex-direction: column;
+  }
 
-    .about_content_knife {
-        margin: 4rem 0;
-    }
+  .about_content_knife {
+    margin: 4rem 0;
+  }
 }
 
 @media screen and (max-width: 650px) {
-    .about_overlay img {
-        width: 80%;
-        height: 320px;
-    }
+  .about_overlay img {
+    width: 80%;
+    height: 320px;
+  }
 }

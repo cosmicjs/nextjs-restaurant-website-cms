@@ -10,7 +10,13 @@ import GoogleMap from 'components/GoogleMap'
 const Contacts = ({ info }) => (
   <div className={cn('app_bg', 'app_wrapper', 'section_padding')} id="contact">
     <div className={cn('app_container', 'app_wrapper')}>
-      <div className={cn(styles.contact_info, 'app_wrapper_info')}>
+      <div
+        className={cn(
+          styles.contact_info,
+          'app_wrapper_info',
+          'max-width: 1200px;'
+        )}
+      >
         <SubHeading title={info?.metadata?.section} />
         <h1 className="headtext_cormorant">{info?.metadata?.title}</h1>
         <div className={cn(styles.contact_title, 'app_wrapper_content')}>
@@ -32,9 +38,9 @@ const Contacts = ({ info }) => (
           <SocialMedia />
         </div>
       </div>
-      <div>
-        <GoogleMap />
-        {/* <div className={cn(styles.wrapper_img, 'img_padding')}>
+
+      <GoogleMap />
+      {/* <div className={cn(styles.wrapper_img, 'img_padding')}>
           <Image
             src={info?.metadata?.picture?.imgix_url}
             alt="find_us_img"
@@ -43,7 +49,6 @@ const Contacts = ({ info }) => (
             height={550}
           />
         </div> */}
-      </div>
     </div>
   </div>
 )

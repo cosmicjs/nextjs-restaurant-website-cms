@@ -21,7 +21,9 @@ const MenuIntro = ({ info, slug }) => {
         <div className={cn('app_wrapper_img', 'app_wrapper_img_reverse')}>
           <div className={cn(styles.wrapper_img, 'img_padding')}>
             <Image
-              src={chooseMenuItem?.metadata?.picture?.imgix_url || images?.chef}
+              src={
+                chooseMenuItem?.metadata?.picture?.imgix_url || images?.noimg
+              }
               alt="intro_image"
               objectFit="cover"
               width={450}

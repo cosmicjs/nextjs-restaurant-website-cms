@@ -8,6 +8,7 @@ import Button from 'components/Button'
 import SubHeading from 'components/SubHeading'
 
 import styles from './styles.module.scss'
+import images from 'constants/images'
 
 const Gallery = ({ info }) => {
   const scrollRef = useRef(null)
@@ -48,7 +49,7 @@ const Gallery = ({ info }) => {
                   key={index}
                 >
                   <Image
-                    src={metadata?.picture?.imgix_url}
+                    src={metadata?.picture?.imgix_url || images.noimg}
                     layout="fill"
                     objectFit="cover"
                     alt="gallery_image"
