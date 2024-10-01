@@ -12,8 +12,6 @@ import styles from './styles.module.scss'
 const SpacialMenu = ({ info }) => {
   const food = chooseByType(info, 'food')
   const drink = chooseByType(info, 'drink')
-  // console.log(JSON.stringify(food))
-  // console.log(JSON.stringify(drink))
 
   return (
     <div
@@ -88,7 +86,7 @@ const SpacialMenu = ({ info }) => {
           </div>
         )}
       </div>
-      <Button name="View More" path="#gallery" />
+      <Button name="Xem thêm" path="#gallery" />
     </div>
   )
 }
