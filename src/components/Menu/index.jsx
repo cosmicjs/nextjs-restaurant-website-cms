@@ -43,6 +43,7 @@ const SpacialMenu = ({ info }) => {
                         title={title}
                         price={metadata?.price}
                         tags={metadata?.tags}
+                        type={metadata?.type}
                       />
                     </a>
                   </Link>
@@ -77,6 +78,7 @@ const SpacialMenu = ({ info }) => {
                         title={title}
                         price={metadata?.price}
                         tags={metadata?.tags}
+                        type={metadata?.type}
                       />
                     </a>
                   </Link>

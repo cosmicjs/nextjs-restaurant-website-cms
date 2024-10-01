@@ -23,6 +23,15 @@
   margin-top: 1rem;
 }
 
+.contact_sub_intro {
+  display: flex;
+  align-items: center;
+}
+
+.contact_sub_intro:hover {
+  color: $color-golden;
+}
+
 @media screen and (min-width: 2000px) {
   .contact_info {
     max-width: 80%;

@@ -33,7 +33,6 @@ function Menu({ data }) {
         />
         <Gallery
           info={[chooseByType(data, 'gallery'), chooseByType(data, 'food')]}
-          // info={data}
         />
       </Layout>
       <Footer>

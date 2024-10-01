@@ -27,17 +27,18 @@ const Contacts = ({ info }) => {
           <div className={cn(styles.contact_title, 'app_wrapper_content')}>
             <p className="opensans">{info?.metadata?.intro}</p>
             <div className="app_wrapper_content">
-              <p className="opensans">
-                <GiGreenhouse />
-                &nbsp;{info?.metadata?.details?.[1]?.intro}
-              </p>
               <div className="opensans">
-                <GiPhone />
-                &nbsp;
-                <a href={`tel:${info?.metadata?.sub_intro}`}>
-                  {info?.metadata?.sub_intro}
-                </a>
+                <GiGreenhouse />
+                &nbsp;Address:&nbsp;{info?.metadata?.details?.[1]?.intro}
               </div>
+              {info?.metadata?.sub_intro && (
+                <div className={cn(styles.contact_sub_intro, 'opensans')}>
+                  <GiPhone />
+                  <a href={`tel:${info.metadata.sub_intro}`}>
+                    &nbsp;Tel:&nbsp;{info.metadata.sub_intro}
+                  </a>
+                </div>
+              )}
             </div>
             <p className={cn(styles.contact_hours, 'cormorant')}>
               {info?.metadata?.details?.[0]?.title}

@@ -31,7 +31,7 @@ const Gallery = ({ info }) => {
         <p className={cn(styles.gallery_content_intro, 'opensans')}>
           {info?.[0]?.metadata?.intro}
         </p>
-        <Button name="Xem thêm" path="#menu" />
+        <Button name="Xem thêm" path="/#menu" />
       </div>
       <div className={styles.gallery_images}>
         <div className={styles.gallery_images_container} ref={scrollRef}>
