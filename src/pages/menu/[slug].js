@@ -1,12 +1,13 @@
-import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 import Contacts from 'components/Contact'
 import Footer from 'components/Footer'
 import Gallery from 'components/Gallery'
+
+import HeadTag from 'components/HeadTag'
 import Layout from 'components/Layout'
 import MenuIntro from 'components/MenuIntro'
-// import VideoIntro from 'components/VideoIntro'
+import VideoIntro from 'components/VideoIntro'
 
 import { getAllDataWithSlug, getDataFromBucket } from 'lib/api'
 import chooseByType from 'utils/chooseValueByType'
@@ -18,25 +19,18 @@ function Menu({ data }) {
 
   return (
     <>
-      <Head>
-        <title>Next.js Restaurant CMS</title>
-        <meta
-          name="description"
-          content="Create template using cosmic.js CMS"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadTag />
       <Layout navbar={chooseByType(data, 'navigation')}>
         <MenuIntro
           info={[chooseByType(data, 'drink'), chooseByType(data, 'food')]}
           slug={slug}
         />
         <Gallery
-          info={[chooseByType(data, 'gallery'), chooseByType(data, 'food')]}
+          info={[chooseByType(data, 'gallery'), chooseByType(data, 'drink')]}
         />
       </Layout>
       <Footer>
-        {/* <VideoIntro url={chooseByType(data, 'sushi')} /> */}
+        <VideoIntro url={chooseByType(data, 'sushi')} />
         <Contacts info={chooseByType(data, 'contact')} />
       </Footer>
     </>

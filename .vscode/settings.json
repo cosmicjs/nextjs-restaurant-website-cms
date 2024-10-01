@@ -1,6 +1,9 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
   "editor.formatOnPaste": false,
   "prettier.useEditorConfig": false,
   "prettier.useTabs": false,

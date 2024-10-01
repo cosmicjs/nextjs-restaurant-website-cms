@@ -1,11 +1,11 @@
-import { useState } from 'react'
 import cn from 'classnames'
+import Image from 'next/legacy/image'
 import Link from 'next/link'
-import Image from "next/legacy/image"
+import { useState } from 'react'
 
+import images from 'constants/images'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { MdOutlineRestaurantMenu } from 'react-icons/md'
-import images from 'constants/images'
 
 import styles from './styles.module.scss'
 
@@ -25,7 +25,7 @@ const Navbar = ({ navbarInfo }) => {
 
   return (
     <nav className={styles.navbar_container} id="navigation">
-      <Link href="/#home" passHref legacyBehavior>
+      <Link href="/#home" passHref>
         <div className={styles.navbar_logo}>
           <Image
             src={navbarInfo?.metadata?.logo?.imgix_url || images?.gericht}
@@ -41,7 +41,6 @@ const Navbar = ({ navbarInfo }) => {
             <Link
               href={navbarInfo ? `/#${item?.toLowerCase()}` : '#contact'}
               passHref
-              legacyBehavior
             >
               {item}
             </Link>
@@ -50,7 +49,7 @@ const Navbar = ({ navbarInfo }) => {
       </ul>
       <div className={styles.navbar_login}>
         <p className={cn(styles.menu_item, 'opensans')}>
-          <Link href="#contact" passHref legacyBehavior>
+          <Link href="#contact" passHref>
             {navbarInfo?.metadata?.action || ''}
           </Link>
         </p>
@@ -78,7 +77,6 @@ const Navbar = ({ navbarInfo }) => {
                   <Link
                     href={navbarInfo ? `/#${item?.toLowerCase()}` : '#contact'}
                     passHref
-                    legacyBehavior
                   >
                     {item}
                   </Link>
@@ -89,7 +87,7 @@ const Navbar = ({ navbarInfo }) => {
         )}
       </div>
     </nav>
-  );
+  )
 }
 
 export default Navbar

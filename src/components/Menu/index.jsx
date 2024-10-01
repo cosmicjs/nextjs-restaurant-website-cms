@@ -1,9 +1,9 @@
-import Image from "next/legacy/image"
-import Link from 'next/link'
 import cn from 'classnames'
-import SubHeading from 'components/SubHeading'
-import MenuItem from 'components/Menu/Menuitem'
 import Button from 'components/Button'
+import MenuItem from 'components/Menu/Menuitem'
+import SubHeading from 'components/SubHeading'
+import Image from 'next/legacy/image'
+import Link from 'next/link'
 
 import chooseByType from 'utils/chooseValueByType'
 
@@ -37,7 +37,6 @@ const SpacialMenu = ({ info }) => {
                   <Link
                     href={info ? `/menu/${slug}?#menu-intro` : '/#menu'}
                     passHref
-                    legacyBehavior
                   >
                     <MenuItem
                       title={title}
@@ -71,7 +70,6 @@ const SpacialMenu = ({ info }) => {
                   <Link
                     href={info ? `/menu/${slug}?#menu-intro` : '/#menu'}
                     passHref
-                    legacyBehavior
                   >
                     <MenuItem
                       title={title}

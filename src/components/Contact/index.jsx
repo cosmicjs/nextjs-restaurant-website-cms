@@ -1,12 +1,11 @@
-import Image from "next/legacy/image"
 import cn from 'classnames'
 
-import SubHeading from 'components/SubHeading'
 import SocialMedia from 'components/Contact/SocialMedia'
+import SubHeading from 'components/SubHeading'
 
-import styles from './styles.module.scss'
 import GoogleMap from 'components/GoogleMap'
-import { GiGreenhouse, GiPhone } from 'react-icons/gi'
+import { GiGreenhouse, GiRotaryPhone } from 'react-icons/gi'
+import styles from './styles.module.scss'
 
 const Contacts = ({ info }) => {
   return (
@@ -28,12 +27,12 @@ const Contacts = ({ info }) => {
             <p className="opensans">{info?.metadata?.intro}</p>
             <div className="app_wrapper_content">
               <div className="opensans">
-                <GiGreenhouse />
+                <GiGreenhouse size={'1.5em'} />
                 &nbsp;Address:&nbsp;{info?.metadata?.details?.[1]?.intro}
               </div>
               {info?.metadata?.sub_intro && (
                 <div className={cn(styles.contact_sub_intro, 'opensans')}>
-                  <GiPhone />
+                  <GiRotaryPhone size={'1.5em'} />
                   <a href={`tel:${info.metadata.sub_intro}`}>
                     &nbsp;Tel:&nbsp;{info.metadata.sub_intro}
                   </a>

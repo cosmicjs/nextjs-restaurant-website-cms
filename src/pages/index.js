@@ -2,12 +2,12 @@ import AboutUs from 'components/AboutUs'
 import Contacts from 'components/Contact'
 import Footer from 'components/Footer'
 import Gallery from 'components/Gallery'
+import HeadTag from 'components/HeadTag'
 import Home from 'components/Home'
 import Introduction from 'components/Introduction'
 import Layout from 'components/Layout'
 import SpacialMenu from 'components/Menu'
 import VideoIntro from 'components/VideoIntro'
-import Head from 'next/head'
 
 import { getDataFromBucket } from 'lib/api'
 import chooseByType from 'utils/chooseValueByType'
@@ -15,11 +15,7 @@ import chooseByType from 'utils/chooseValueByType'
 function TopPage({ data }) {
   return (
     <>
-      <Head>
-        <title>1989s craftbeer</title>
-        <meta name="description" content="Da Nang local craft beer" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadTag />
       <Layout navbar={chooseByType(data, 'navigation')}>
         <Home info={chooseByType(data, 'header')} />
         <AboutUs info={chooseByType(data, 'about')} />

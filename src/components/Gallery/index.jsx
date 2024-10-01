@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import Image from "next/legacy/image"
+import Image from 'next/legacy/image'
 import Link from 'next/link'
 import { useRef } from 'react'
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
@@ -7,8 +7,8 @@ import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 import Button from 'components/Button'
 import SubHeading from 'components/SubHeading'
 
-import styles from './styles.module.scss'
 import images from 'constants/images'
+import styles from './styles.module.scss'
 
 const Gallery = ({ info }) => {
   const scrollRef = useRef(null)
@@ -42,8 +42,7 @@ const Gallery = ({ info }) => {
                 key={index}
                 href={info ? `/menu/${slug}?#menu-intro` : '/#gallery'}
                 passHref
-                legacyBehavior>
-                {/* <a> */}
+              >
                 <div
                   className={cn(styles.gallery_images_card, 'flex_center')}
                   key={index}
@@ -60,7 +59,6 @@ const Gallery = ({ info }) => {
                     <h4>{metadata?.price}</h4>
                   </div>
                 </div>
-                {/* </a> */}
               </Link>
             )
           )}
@@ -77,7 +75,7 @@ const Gallery = ({ info }) => {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default Gallery

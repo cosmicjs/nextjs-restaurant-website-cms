@@ -1,6 +1,3 @@
-import Image from "next/legacy/image"
-import Link from 'next/link'
-
 import styles from './styles.module.scss'
 
 const Footer = ({ children }) => (
@@ -8,7 +5,7 @@ const Footer = ({ children }) => (
     {children}
 
     <div className={styles.footer_copyright}>
-      <p className="opensans">&copy; 2022-2024 | 1989s Solutions Co. Ltd</p>
+      <p className="opensans">&copy; 2022-2024 | 1989 BEER</p>
     </div>
   </footer>
 )

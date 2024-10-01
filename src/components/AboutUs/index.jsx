@@ -1,7 +1,7 @@
-import Image from "next/legacy/image"
 import cn from 'classnames'
-import LineBreak from 'components/SubHeading/LineBreak'
 import Button from 'components/Button'
+import LineBreak from 'components/SubHeading/LineBreak'
+import Image from 'next/legacy/image'
 
 import styles from './styles.module.scss'
 

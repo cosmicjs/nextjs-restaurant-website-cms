@@ -1,3 +1,6 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "linebreak-style": ["error", "unix"] // changes the file to LF
+  }
 }
