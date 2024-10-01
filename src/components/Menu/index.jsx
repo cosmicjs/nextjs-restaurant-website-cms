@@ -37,15 +37,14 @@ const SpacialMenu = ({ info }) => {
                   <Link
                     href={info ? `/menu/${slug}?#menu-intro` : '/#menu'}
                     passHref
+                    legacyBehavior
                   >
-                    <a>
-                      <MenuItem
-                        title={title}
-                        price={metadata?.price}
-                        tags={metadata?.tags}
-                        type={metadata?.type}
-                      />
-                    </a>
+                    <MenuItem
+                      title={title}
+                      price={metadata?.price}
+                      tags={metadata?.tags}
+                      type={metadata?.type}
+                    />
                   </Link>
                 </div>
               ))}
@@ -72,15 +71,14 @@ const SpacialMenu = ({ info }) => {
                   <Link
                     href={info ? `/menu/${slug}?#menu-intro` : '/#menu'}
                     passHref
+                    legacyBehavior
                   >
-                    <a>
-                      <MenuItem
-                        title={title}
-                        price={metadata?.price}
-                        tags={metadata?.tags}
-                        type={metadata?.type}
-                      />
-                    </a>
+                    <MenuItem
+                      title={title}
+                      price={metadata?.price}
+                      tags={metadata?.tags}
+                      type={metadata?.type}
+                    />
                   </Link>
                 </div>
               ))}

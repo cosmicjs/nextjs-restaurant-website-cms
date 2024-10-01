@@ -41,8 +41,9 @@ const Navbar = ({ navbarInfo }) => {
             <Link
               href={navbarInfo ? `/#${item?.toLowerCase()}` : '#contact'}
               passHref
+              legacyBehavior
             >
-              <a>{item}</a>
+              {item}
             </Link>
           </li>
         ))}
@@ -77,8 +78,9 @@ const Navbar = ({ navbarInfo }) => {
                   <Link
                     href={navbarInfo ? `/#${item?.toLowerCase()}` : '#contact'}
                     passHref
+                    legacyBehavior
                   >
-                    <a>{item}</a>
+                    {item}
                   </Link>
                 </li>
               ))}

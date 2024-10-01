@@ -1,13 +1,13 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
-const Button = ({name, path}) => {
+const Button = ({ name, path }) => {
   return (
-    <Link href={path} passHref>
-      <a>
-        <button type='button' className='custom_button'>{name}</button>
-      </a>
+    <Link href={path} passHref legacyBehavior>
+      <button type="button" className="custom_button">
+        {name}
+      </button>
     </Link>
   )
 }
 
-export default Button;
+export default Button
