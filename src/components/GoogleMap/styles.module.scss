@@ -1,7 +1,7 @@
 .google_maps {
   // width: 100%;
   flex: 1; /* Make the map take more space */
-  width: 300px; /* Minimum width for the map */
+  width: 400px; /* Minimum width for the map */
   height: 300px;
   // min-height: 300px;
 }
@@ -15,7 +15,7 @@
 
 @media screen and (min-width: 2000px) {
   .google_maps {
-    width: 300px;
+    width: 400px;
     min-height: 300px;
   }
 }
