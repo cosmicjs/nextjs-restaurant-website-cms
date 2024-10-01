@@ -25,7 +25,7 @@ const Navbar = ({ navbarInfo }) => {
 
   return (
     <nav className={styles.navbar_container} id="navigation">
-      <Link href="/#home" passHref>
+      <Link href="/#home" passHref legacyBehavior>
         <div className={styles.navbar_logo}>
           <Image
             src={navbarInfo?.metadata?.logo?.imgix_url || images?.gericht}
@@ -50,7 +50,7 @@ const Navbar = ({ navbarInfo }) => {
       </ul>
       <div className={styles.navbar_login}>
         <p className={cn(styles.menu_item, 'opensans')}>
-          <Link href="#contact" passHref>
+          <Link href="#contact" passHref legacyBehavior>
             {navbarInfo?.metadata?.action || ''}
           </Link>
         </p>
@@ -89,7 +89,7 @@ const Navbar = ({ navbarInfo }) => {
         )}
       </div>
     </nav>
-  )
+  );
 }
 
 export default Navbar

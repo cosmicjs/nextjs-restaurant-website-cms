@@ -42,7 +42,7 @@ const Gallery = ({ info }) => {
                 key={index}
                 href={info ? `/menu/${slug}?#menu-intro` : '/#gallery'}
                 passHref
-              >
+                legacyBehavior>
                 {/* <a> */}
                 <div
                   className={cn(styles.gallery_images_card, 'flex_center')}
@@ -77,7 +77,7 @@ const Gallery = ({ info }) => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Gallery
